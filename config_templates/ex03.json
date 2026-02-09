@@ -1,8 +1,8 @@
 {
   "id": "ex03",
-  "title": "Hernoemen bestand",
+  "title": "Muzikant – hernoemen",
   "type": "rename",
-  "instruction": "Geef het bestand \"werkblad.xlsx\" de naam \"werkblad_af.xlsx\".",
+  "instruction": "Geef het bestand \"demo_v1.mp3\" de naam \"demo_definitief.mp3\".",
   "ui": {
     "language": "nl-BE",
     "startLocation": "mijn_bestanden",
@@ -10,7 +10,34 @@
   },
   "startTree": {
     "rootId": "root",
-    "items": []
+    "items": [
+      {
+        "id": "m1",
+        "kind": "folder",
+        "name": "Muziek",
+        "parentId": "root",
+        "modified": "2024-09-01",
+        "size": "—"
+      },
+      {
+        "id": "m2",
+        "kind": "file",
+        "name": "demo_v1.mp3",
+        "parentId": "m1",
+        "modified": "2024-11-02",
+        "size": "6,2 MB",
+        "fileType": "audio"
+      },
+      {
+        "id": "m3",
+        "kind": "file",
+        "name": "songtekst.txt",
+        "parentId": "m1",
+        "modified": "2024-11-01",
+        "size": "3 KB",
+        "fileType": "text"
+      }
+    ]
   },
   "allowedActions": {
     "createFolder": false,
@@ -20,7 +47,30 @@
   },
   "goal": {
     "type": "rename",
-    "checks": []
+    "checks": [
+      {
+        "op": "fileRenamed",
+        "oldName": "demo_v1.mp3",
+        "newName": "demo_definitief.mp3"
+      }
+    ]
   },
-  "tips": []
+  "tips": [
+    {
+      "target": "folderRow:Muziek",
+      "text": "Open de map Muziek."
+    },
+    {
+      "target": "itemMore:demo_v1.mp3",
+      "text": "Tik op … naast demo_v1.mp3."
+    },
+    {
+      "target": "contextAction:NaamWijzigen",
+      "text": "Kies Naam wijzigen."
+    },
+    {
+      "target": "dialogRename:nameInput",
+      "text": "Typ demo_definitief.mp3."
+    }
+  ]
 }

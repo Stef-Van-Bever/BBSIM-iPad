@@ -1,0 +1,26 @@
+{
+  "id": "ex03",
+  "title": "Hernoemen bestand",
+  "type": "rename",
+  "instruction": "Geef het bestand \"werkblad.xlsx\" de naam \"werkblad_af.xlsx\".",
+  "ui": {
+    "language": "nl-BE",
+    "startLocation": "mijn_bestanden",
+    "listView": true
+  },
+  "startTree": {
+    "rootId": "root",
+    "items": []
+  },
+  "allowedActions": {
+    "createFolder": false,
+    "rename": true,
+    "move": false,
+    "delete": false
+  },
+  "goal": {
+    "type": "rename",
+    "checks": []
+  },
+  "tips": []
+}

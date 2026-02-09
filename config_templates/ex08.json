@@ -1,8 +1,8 @@
 {
   "id": "ex08",
-  "title": "Verwijderen in submap",
+  "title": "Fotograaf – verwijderen",
   "type": "delete",
-  "instruction": "Verwijder het bestand \"dubbel.jpg\" in de map \"05 - MEDIA\".",
+  "instruction": "Verwijder het dubbele bestand \"IMG_0001_DUP.jpg\".",
   "ui": {
     "language": "nl-BE",
     "startLocation": "mijn_bestanden",
@@ -10,7 +10,42 @@
   },
   "startTree": {
     "rootId": "root",
-    "items": []
+    "items": [
+      {
+        "id": "f1",
+        "kind": "folder",
+        "name": "Fotoshoots",
+        "parentId": "root",
+        "modified": "2024-09-01",
+        "size": "—"
+      },
+      {
+        "id": "f2",
+        "kind": "folder",
+        "name": "Bruiloft_Jan_Anne",
+        "parentId": "f1",
+        "modified": "2024-09-01",
+        "size": "—"
+      },
+      {
+        "id": "f3",
+        "kind": "file",
+        "name": "IMG_0001.jpg",
+        "parentId": "f2",
+        "modified": "2024-06-21",
+        "size": "3,2 MB",
+        "fileType": "image"
+      },
+      {
+        "id": "f4",
+        "kind": "file",
+        "name": "IMG_0001_DUP.jpg",
+        "parentId": "f2",
+        "modified": "2024-06-21",
+        "size": "3,2 MB",
+        "fileType": "image"
+      }
+    ]
   },
   "allowedActions": {
     "createFolder": false,
@@ -20,7 +55,30 @@
   },
   "goal": {
     "type": "delete",
-    "checks": []
+    "checks": [
+      {
+        "op": "itemDeleted",
+        "itemName": "IMG_0001_DUP.jpg",
+        "parentName": "Bruiloft_Jan_Anne"
+      }
+    ]
   },
-  "tips": []
+  "tips": [
+    {
+      "target": "folderRow:Fotoshoots",
+      "text": "Open de map Fotoshoots."
+    },
+    {
+      "target": "folderRow:Bruiloft_Jan_Anne",
+      "text": "Open de juiste fotoshoot."
+    },
+    {
+      "target": "itemMore:IMG_0001_DUP.jpg",
+      "text": "Tik op … naast het dubbele bestand."
+    },
+    {
+      "target": "contextAction:Verwijderen",
+      "text": "Kies Verwijderen."
+    }
+  ]
 }

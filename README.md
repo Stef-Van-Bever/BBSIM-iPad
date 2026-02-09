@@ -16,3 +16,8 @@ Dit ZIPje bevat:
 4. Laat Codex daarna de code genereren in `src/` + buildscript naar `dist/`.
 
 Tip: laat Codex eerst **1 oefening end-to-end** bouwen (bv. ex01) en pas daarna uitbreiden naar 8.
+
+
+## Seed-configs
+Er zit nu ook een map `seed_exercises/` in met volledig ingevulde `ex01.json` … `ex08.json`.
+Daarnaast zijn de JSON’s in `config_templates/` overschreven met de uitgewerkte versies (de originele skeletten staan in `config_templates_skeleton_backup/`).

@@ -1,0 +1,26 @@
+{
+  "id": "ex04",
+  "title": "Hernoemen map",
+  "type": "rename",
+  "instruction": "Geef de map \"05 - MEDIA\" de naam \"05 - FOTO'S\".",
+  "ui": {
+    "language": "nl-BE",
+    "startLocation": "mijn_bestanden",
+    "listView": true
+  },
+  "startTree": {
+    "rootId": "root",
+    "items": []
+  },
+  "allowedActions": {
+    "createFolder": false,
+    "rename": true,
+    "move": false,
+    "delete": false
+  },
+  "goal": {
+    "type": "rename",
+    "checks": []
+  },
+  "tips": []
+}

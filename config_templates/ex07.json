@@ -1,8 +1,8 @@
 {
   "id": "ex07",
-  "title": "Verwijderen in root",
+  "title": "Elektricien – verwijderen",
   "type": "delete",
-  "instruction": "Verwijder het bestand \"oud_schema.pdf\" in Mijn bestanden.",
+  "instruction": "Verwijder het bestand \"oude_offerte.pdf\".",
   "ui": {
     "language": "nl-BE",
     "startLocation": "mijn_bestanden",
@@ -10,7 +10,34 @@
   },
   "startTree": {
     "rootId": "root",
-    "items": []
+    "items": [
+      {
+        "id": "e1",
+        "kind": "folder",
+        "name": "Offertes",
+        "parentId": "root",
+        "modified": "2024-09-01",
+        "size": "—"
+      },
+      {
+        "id": "e2",
+        "kind": "file",
+        "name": "oude_offerte.pdf",
+        "parentId": "e1",
+        "modified": "2023-03-12",
+        "size": "221 KB",
+        "fileType": "pdf"
+      },
+      {
+        "id": "e3",
+        "kind": "file",
+        "name": "offerte_2024.pdf",
+        "parentId": "e1",
+        "modified": "2024-01-08",
+        "size": "245 KB",
+        "fileType": "pdf"
+      }
+    ]
   },
   "allowedActions": {
     "createFolder": false,
@@ -20,7 +47,29 @@
   },
   "goal": {
     "type": "delete",
-    "checks": []
+    "checks": [
+      {
+        "op": "itemDeleted",
+        "itemName": "oude_offerte.pdf"
+      }
+    ]
   },
-  "tips": []
+  "tips": [
+    {
+      "target": "folderRow:Offertes",
+      "text": "Open de map Offertes."
+    },
+    {
+      "target": "itemMore:oude_offerte.pdf",
+      "text": "Tik op … naast oude_offerte.pdf."
+    },
+    {
+      "target": "contextAction:Verwijderen",
+      "text": "Kies Verwijderen."
+    },
+    {
+      "target": "dialogConfirm:delete",
+      "text": "Bevestig verwijderen."
+    }
+  ]
 }

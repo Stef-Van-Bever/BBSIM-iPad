@@ -1,0 +1,26 @@
+{
+  "id": "ex08",
+  "title": "Verwijderen in submap",
+  "type": "delete",
+  "instruction": "Verwijder het bestand \"dubbel.jpg\" in de map \"05 - MEDIA\".",
+  "ui": {
+    "language": "nl-BE",
+    "startLocation": "mijn_bestanden",
+    "listView": true
+  },
+  "startTree": {
+    "rootId": "root",
+    "items": []
+  },
+  "allowedActions": {
+    "createFolder": false,
+    "rename": false,
+    "move": false,
+    "delete": true
+  },
+  "goal": {
+    "type": "delete",
+    "checks": []
+  },
+  "tips": []
+}

@@ -1,0 +1,146 @@
+{
+  "id": "ex06",
+  "title": "Verplaatsen vanuit submap",
+  "type": "move",
+  "instruction": "Verplaats het bestand \"poster.pptx\" uit de map \"02 - PROJECTEN\" naar de map \"04 - BIJSCHOLINGEN\".",
+  "ui": {
+    "language": "nl-BE",
+    "startLocation": "mijn_bestanden",
+    "listView": true
+  },
+  "startTree": {
+    "rootId": "root",
+    "items": [
+      {
+        "id": "f01",
+        "kind": "folder",
+        "name": "01 - LESOPDRACHT",
+        "parentId": "root",
+        "modified": "2024-08-29",
+        "size": "349,3 MB"
+      },
+      {
+        "id": "f02",
+        "kind": "folder",
+        "name": "02 - PROJECTEN",
+        "parentId": "root",
+        "modified": "2023-09-28",
+        "size": "2,05 GB"
+      },
+      {
+        "id": "f04",
+        "kind": "folder",
+        "name": "04 - BIJSCHOLINGEN",
+        "parentId": "root",
+        "modified": "2023-08-04",
+        "size": "1,58 GB"
+      },
+      {
+        "id": "f05",
+        "kind": "folder",
+        "name": "05 - MEDIA",
+        "parentId": "root",
+        "modified": "2023-08-02",
+        "size": "134,4 MB"
+      },
+      {
+        "id": "f06",
+        "kind": "folder",
+        "name": "06 - BEZIG",
+        "parentId": "root",
+        "modified": "2023-08-24",
+        "size": "8,93 GB"
+      },
+      {
+        "id": "f07",
+        "kind": "folder",
+        "name": "07 - Videoprojecten",
+        "parentId": "root",
+        "modified": "2025-01-16",
+        "size": "467,2 MB"
+      },
+      {
+        "id": "fapps",
+        "kind": "folder",
+        "name": "Apps",
+        "parentId": "root",
+        "modified": "2024-10-22",
+        "size": "0 KB"
+      },
+      {
+        "id": "fatt",
+        "kind": "folder",
+        "name": "Attachments",
+        "parentId": "root",
+        "modified": "2024-10-22",
+        "size": "51,2 MB"
+      },
+      {
+        "id": "pp1",
+        "kind": "file",
+        "name": "poster.pptx",
+        "parentId": "f02",
+        "modified": "2025-02-01",
+        "size": "307 KB",
+        "fileType": "ppt"
+      },
+      {
+        "id": "pp2",
+        "kind": "file",
+        "name": "budget.xlsx",
+        "parentId": "f02",
+        "modified": "2025-01-10",
+        "size": "54 KB",
+        "fileType": "excel"
+      },
+      {
+        "id": "bi1",
+        "kind": "file",
+        "name": "nascholing_notities.docx",
+        "parentId": "f04",
+        "modified": "2024-12-02",
+        "size": "39 KB",
+        "fileType": "word"
+      }
+    ]
+  },
+  "allowedActions": {
+    "createFolder": false,
+    "rename": false,
+    "move": true,
+    "delete": false
+  },
+  "goal": {
+    "type": "move",
+    "checks": [
+      {
+        "op": "itemMoved",
+        "itemName": "poster.pptx",
+        "fromParentName": "02 - PROJECTEN",
+        "toParentName": "04 - BIJSCHOLINGEN"
+      }
+    ]
+  },
+  "tips": [
+    {
+      "target": "folderRow:02 - PROJECTEN",
+      "text": "Open eerst de map 02 - PROJECTEN."
+    },
+    {
+      "target": "itemMore:poster.pptx",
+      "text": "Tik op de drie puntjes (…) naast poster.pptx."
+    },
+    {
+      "target": "contextAction:Verplaatsen",
+      "text": "Kies Verplaatsen."
+    },
+    {
+      "target": "folderPickerRow:04 - BIJSCHOLINGEN",
+      "text": "Kies 04 - BIJSCHOLINGEN als doelmap."
+    },
+    {
+      "target": "folderPickerConfirm",
+      "text": "Bevestig verplaatsen."
+    }
+  ]
+}

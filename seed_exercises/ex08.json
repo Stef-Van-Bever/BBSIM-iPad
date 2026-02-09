@@ -1,0 +1,141 @@
+{
+  "id": "ex08",
+  "title": "Verwijderen in submap",
+  "type": "delete",
+  "instruction": "Verwijder het bestand \"dubbel.jpg\" in de map \"05 - MEDIA\".",
+  "ui": {
+    "language": "nl-BE",
+    "startLocation": "mijn_bestanden",
+    "listView": true
+  },
+  "startTree": {
+    "rootId": "root",
+    "items": [
+      {
+        "id": "f01",
+        "kind": "folder",
+        "name": "01 - LESOPDRACHT",
+        "parentId": "root",
+        "modified": "2024-08-29",
+        "size": "349,3 MB"
+      },
+      {
+        "id": "f02",
+        "kind": "folder",
+        "name": "02 - PROJECTEN",
+        "parentId": "root",
+        "modified": "2023-09-28",
+        "size": "2,05 GB"
+      },
+      {
+        "id": "f04",
+        "kind": "folder",
+        "name": "04 - BIJSCHOLINGEN",
+        "parentId": "root",
+        "modified": "2023-08-04",
+        "size": "1,58 GB"
+      },
+      {
+        "id": "f05",
+        "kind": "folder",
+        "name": "05 - MEDIA",
+        "parentId": "root",
+        "modified": "2023-08-02",
+        "size": "134,4 MB"
+      },
+      {
+        "id": "f06",
+        "kind": "folder",
+        "name": "06 - BEZIG",
+        "parentId": "root",
+        "modified": "2023-08-24",
+        "size": "8,93 GB"
+      },
+      {
+        "id": "f07",
+        "kind": "folder",
+        "name": "07 - Videoprojecten",
+        "parentId": "root",
+        "modified": "2025-01-16",
+        "size": "467,2 MB"
+      },
+      {
+        "id": "fapps",
+        "kind": "folder",
+        "name": "Apps",
+        "parentId": "root",
+        "modified": "2024-10-22",
+        "size": "0 KB"
+      },
+      {
+        "id": "fatt",
+        "kind": "folder",
+        "name": "Attachments",
+        "parentId": "root",
+        "modified": "2024-10-22",
+        "size": "51,2 MB"
+      },
+      {
+        "id": "img1",
+        "kind": "file",
+        "name": "dubbel.jpg",
+        "parentId": "f05",
+        "modified": "2025-01-06",
+        "size": "2,4 MB",
+        "fileType": "image"
+      },
+      {
+        "id": "img2",
+        "kind": "file",
+        "name": "klasuitstap_1.jpg",
+        "parentId": "f05",
+        "modified": "2025-01-06",
+        "size": "2,6 MB",
+        "fileType": "image"
+      },
+      {
+        "id": "vid1",
+        "kind": "file",
+        "name": "presentatie.mp4",
+        "parentId": "f05",
+        "modified": "2024-12-14",
+        "size": "22,0 MB",
+        "fileType": "video"
+      }
+    ]
+  },
+  "allowedActions": {
+    "createFolder": false,
+    "rename": false,
+    "move": false,
+    "delete": true
+  },
+  "goal": {
+    "type": "delete",
+    "checks": [
+      {
+        "op": "itemDeleted",
+        "itemName": "dubbel.jpg",
+        "parentName": "05 - MEDIA"
+      }
+    ]
+  },
+  "tips": [
+    {
+      "target": "folderRow:05 - MEDIA",
+      "text": "Open eerst de map 05 - MEDIA."
+    },
+    {
+      "target": "itemMore:dubbel.jpg",
+      "text": "Tik op de drie puntjes (…) naast dubbel.jpg."
+    },
+    {
+      "target": "contextAction:Verwijderen",
+      "text": "Kies Verwijderen."
+    },
+    {
+      "target": "dialogConfirm:delete",
+      "text": "Bevestig verwijderen."
+    }
+  ]
+}
