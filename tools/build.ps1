@@ -1,4 +1,8 @@
-﻿$ErrorActionPreference = "Stop"
+﻿param(
+  [string]$Only
+)
+
+$ErrorActionPreference = "Stop"
 
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path | Split-Path -Parent
 $exercisesDir = Join-Path $root "exercises"
@@ -12,6 +16,9 @@ $launchTemplate = Get-Content -Raw (Join-Path $templateDir "launch.html.template
 $manifestTemplate = Get-Content -Raw (Join-Path $templateDir "imsmanifest.xml.template")
 
 $exerciseFiles = Get-ChildItem $exercisesDir -Filter "ex*.json"
+if ($Only) {
+  $exerciseFiles = $exerciseFiles | Where-Object { $_.BaseName -eq $Only }
+}
 
 foreach ($file in $exerciseFiles) {
   $exId = [IO.Path]::GetFileNameWithoutExtension($file.Name)

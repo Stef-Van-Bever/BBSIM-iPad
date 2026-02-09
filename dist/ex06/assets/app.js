@@ -161,6 +161,8 @@ function renderList() {
       name.innerHTML = `<img class="icon-image" src="assets/folder_icon.png" alt="" /><span>${item.name}</span>`;
     } else if (item.fileType === "word") {
       name.innerHTML = `<img class="icon-image" src="assets/Word_icon.png" alt="" /><span>${item.name}</span>`;
+    } else if (item.fileType === "excel") {
+      name.innerHTML = `<img class="icon-image" src="assets/excel_icon.png" alt="" /><span>${item.name}</span>`;
     } else if (item.fileType === "powerpoint") {
       name.innerHTML = `<img class="icon-image" src="assets/PowerPoint_icon.png" alt="" /><span>${item.name}</span>`;
     } else {

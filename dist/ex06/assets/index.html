@@ -9,43 +9,47 @@
 <body>
   <div id="app" class="app">
     <section class="instruction-stack">
-      <div class="exercise-title" id="exerciseTitle">Oefening laden...</div>
-      <div class="instruction-bar">
-        <div class="instruction-text" id="instructionText">Opdracht laden...</div>
-        <button class="tips-button" id="tipsButton" data-tip="fabPlus">💡 tips</button>
+      <div class="instruction-emoji" aria-hidden="true">🧑‍💻</div>
+      <div class="instruction-content">
+        <div class="exercise-title" id="exerciseTitle">Oefening laden...</div>
+        <div class="instruction-bar">
+          <div class="instruction-text" id="instructionText">Opdracht laden...</div>
+          <button class="tips-button" id="tipsButton" data-tip="fabPlus">💡 tips</button>
+        </div>
       </div>
     </section>
 
-    <header class="topbar">
-      <div class="topbar-title">OneDrive</div>
-      <nav class="topbar-tabs" aria-label="Hoofd tabs">
-        <button class="tab tab-active">
-          <span class="tab-label">Mijn bestanden</span>
-        </button>
-        <button class="tab tab-disabled" data-disabled="true">
-          <img src="assets/startpagina_icon.svg" alt="" class="tab-icon" />
-          <span class="tab-label">Startpagina</span>
-        </button>
-        <button class="tab tab-disabled" data-disabled="true">
-          <img src="assets/bibliotheek_icon.svg" alt="" class="tab-icon" />
-          <span class="tab-label">Bibliotheken</span>
-        </button>
-        <button class="tab tab-disabled" data-disabled="true">
-          <img src="assets/gedeeld_icon.svg" alt="" class="tab-icon" />
-          <span class="tab-label">Gedeeld</span>
-        </button>
-        <button class="tab tab-disabled" data-disabled="true">
-          <img src="assets/media_icon.svg" alt="" class="tab-icon" />
-          <span class="tab-label">Media</span>
-        </button>
-        <button class="tab tab-disabled" data-disabled="true">
-          <img src="assets/offline.icon.svg" alt="" class="tab-icon" />
-          <span class="tab-label">Offline</span>
-        </button>
-      </nav>
-    </header>
+    <div class="app-panel">
+      <header class="topbar">
+        <div class="topbar-title">OneDrive</div>
+        <nav class="topbar-tabs" aria-label="Hoofd tabs">
+          <button class="tab tab-active">
+            <span class="tab-label">Mijn bestanden</span>
+          </button>
+          <button class="tab tab-disabled" data-disabled="true">
+            <img src="assets/startpagina_icon.svg" alt="" class="tab-icon" />
+            <span class="tab-label">Startpagina</span>
+          </button>
+          <button class="tab tab-disabled" data-disabled="true">
+            <img src="assets/bibliotheek_icon.svg" alt="" class="tab-icon" />
+            <span class="tab-label">Bibliotheken</span>
+          </button>
+          <button class="tab tab-disabled" data-disabled="true">
+            <img src="assets/gedeeld_icon.svg" alt="" class="tab-icon" />
+            <span class="tab-label">Gedeeld</span>
+          </button>
+          <button class="tab tab-disabled" data-disabled="true">
+            <img src="assets/media_icon.svg" alt="" class="tab-icon" />
+            <span class="tab-label">Media</span>
+          </button>
+          <button class="tab tab-disabled" data-disabled="true">
+            <img src="assets/offline.icon.svg" alt="" class="tab-icon" />
+            <span class="tab-label">Offline</span>
+          </button>
+        </nav>
+      </header>
 
-    <section class="content">
+      <section class="content">
       <div class="search-bar" data-disabled="true">
         <input type="text" placeholder="Zoeken" disabled />
         <button class="icon-button" data-disabled="true">🔍</button>
@@ -90,7 +94,7 @@
           <span>Word-document</span>
         </div>
         <div class="sheet-list-item" data-disabled="true">
-          <span class="sheet-icon sheet-icon-text">X</span>
+          <img src="assets/excel_icon.png" alt="" class="sheet-icon" />
           <span>Excel-werkblad</span>
         </div>
         <div class="sheet-list-item" data-disabled="true">
