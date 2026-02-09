@@ -1,87 +1,87 @@
 {
-  "id": "ex05",
-  "title": "Boekhouder – verplaatsen",
-  "type": "move",
-  "instruction": "Verplaats het bestand \"factuur_januari.pdf\" naar de map \"Facturen\".",
-  "ui": {
-    "language": "nl-BE",
-    "startLocation": "mijn_bestanden",
-    "listView": true
-  },
-  "startTree": {
-    "rootId": "root",
-    "items": [
-      {
-        "id": "b1",
-        "kind": "folder",
-        "name": "Boekhouding",
-        "parentId": "root",
-        "modified": "2024-09-01",
-        "size": "—"
-      },
-      {
-        "id": "b2",
-        "kind": "folder",
-        "name": "2024",
-        "parentId": "b1",
-        "modified": "2024-09-01",
-        "size": "—"
-      },
-      {
-        "id": "b3",
-        "kind": "folder",
-        "name": "Facturen",
-        "parentId": "b2",
-        "modified": "2024-09-01",
-        "size": "—"
-      },
-      {
-        "id": "b4",
-        "kind": "file",
-        "name": "factuur_januari.pdf",
-        "parentId": "root",
-        "modified": "2024-02-03",
-        "size": "312 KB",
-        "fileType": "pdf"
-      }
-    ]
-  },
-  "allowedActions": {
-    "createFolder": false,
-    "rename": false,
-    "move": true,
-    "delete": false
-  },
-  "goal": {
+    "id": "ex05",
+    "title": "Boekhouder – verplaatsen",
     "type": "move",
-    "checks": [
-      {
-        "op": "itemMoved",
-        "itemName": "factuur_januari.pdf",
-        "toParentName": "Facturen"
-      }
+    "instruction": "Verplaats het bestand \"factuur_januari.pdf\" naar de map \"Facturen\".",
+    "ui": {
+        "language": "nl-BE",
+        "startLocation": "mijn_bestanden",
+        "listView": true
+    },
+    "startTree": {
+        "rootId": "root",
+        "items": [
+            {
+                "id": "b1",
+                "kind": "folder",
+                "name": "Boekhouding",
+                "parentId": "root",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "b2",
+                "kind": "folder",
+                "name": "2024",
+                "parentId": "b1",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "b3",
+                "kind": "folder",
+                "name": "Facturen",
+                "parentId": "b2",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "b4",
+                "kind": "file",
+                "name": "factuur_januari.pdf",
+                "parentId": "root",
+                "modified": "2024-02-03",
+                "size": "312 KB",
+                "fileType": "pdf"
+            }
+        ]
+    },
+    "allowedActions": {
+        "createFolder": false,
+        "rename": false,
+        "move": true,
+        "delete": false
+    },
+    "goal": {
+        "type": "move",
+        "checks": [
+            {
+                "op": "itemMoved",
+                "itemName": "factuur_januari.pdf",
+                "toParentName": "Facturen"
+            }
+        ]
+    },
+    "tips": [
+        {
+            "target": "itemMore:factuur_januari.pdf",
+            "text": "Tik op … naast het bestand."
+        },
+        {
+            "target": "contextAction:Verplaatsen",
+            "text": "Kies Verplaatsen."
+        },
+        {
+            "target": "folderPickerRow:Boekhouding",
+            "text": "Open Boekhouding."
+        },
+        {
+            "target": "folderPickerRow:Facturen",
+            "text": "Kies Facturen."
+        },
+        {
+            "target": "folderPickerConfirm",
+            "text": "Bevestig verplaatsen."
+        }
     ]
-  },
-  "tips": [
-    {
-      "target": "itemMore:factuur_januari.pdf",
-      "text": "Tik op … naast het bestand."
-    },
-    {
-      "target": "contextAction:Verplaatsen",
-      "text": "Kies Verplaatsen."
-    },
-    {
-      "target": "folderPickerRow:Boekhouding",
-      "text": "Open Boekhouding."
-    },
-    {
-      "target": "folderPickerRow:Facturen",
-      "text": "Kies Facturen."
-    },
-    {
-      "target": "folderPickerConfirm",
-      "text": "Bevestig verplaatsen."
-    }
-  ]
 }
