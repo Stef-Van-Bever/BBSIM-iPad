@@ -1,8 +1,8 @@
 {
   "id": "ex06",
-  "title": "Verplaatsen vanuit submap",
+  "title": "Psycholoog – verplaatsen",
   "type": "move",
-  "instruction": "Verplaats het bestand \"poster.pptx\" uit de map \"02 - PROJECTEN\" naar de map \"04 - BIJSCHOLINGEN\".",
+  "instruction": "Verplaats het bestand \"intake_janssens.docx\" naar de map \"Archief\".",
   "ui": {
     "language": "nl-BE",
     "startLocation": "mijn_bestanden",
@@ -12,94 +12,36 @@
     "rootId": "root",
     "items": [
       {
-        "id": "f01",
+        "id": "p1",
         "kind": "folder",
-        "name": "01 - LESOPDRACHT",
+        "name": "Cliënten",
         "parentId": "root",
-        "modified": "2024-08-29",
-        "size": "349,3 MB"
+        "modified": "2024-09-01",
+        "size": "—"
       },
       {
-        "id": "f02",
+        "id": "p2",
         "kind": "folder",
-        "name": "02 - PROJECTEN",
-        "parentId": "root",
-        "modified": "2023-09-28",
-        "size": "2,05 GB"
+        "name": "Dossiers",
+        "parentId": "p1",
+        "modified": "2024-09-01",
+        "size": "—"
       },
       {
-        "id": "f04",
+        "id": "p3",
         "kind": "folder",
-        "name": "04 - BIJSCHOLINGEN",
-        "parentId": "root",
-        "modified": "2023-08-04",
-        "size": "1,58 GB"
+        "name": "Archief",
+        "parentId": "p1",
+        "modified": "2024-09-01",
+        "size": "—"
       },
       {
-        "id": "f05",
-        "kind": "folder",
-        "name": "05 - MEDIA",
-        "parentId": "root",
-        "modified": "2023-08-02",
-        "size": "134,4 MB"
-      },
-      {
-        "id": "f06",
-        "kind": "folder",
-        "name": "06 - BEZIG",
-        "parentId": "root",
-        "modified": "2023-08-24",
-        "size": "8,93 GB"
-      },
-      {
-        "id": "f07",
-        "kind": "folder",
-        "name": "07 - Videoprojecten",
-        "parentId": "root",
-        "modified": "2025-01-16",
-        "size": "467,2 MB"
-      },
-      {
-        "id": "fapps",
-        "kind": "folder",
-        "name": "Apps",
-        "parentId": "root",
-        "modified": "2024-10-22",
-        "size": "0 KB"
-      },
-      {
-        "id": "fatt",
-        "kind": "folder",
-        "name": "Attachments",
-        "parentId": "root",
-        "modified": "2024-10-22",
-        "size": "51,2 MB"
-      },
-      {
-        "id": "pp1",
+        "id": "p4",
         "kind": "file",
-        "name": "poster.pptx",
-        "parentId": "f02",
-        "modified": "2025-02-01",
-        "size": "307 KB",
-        "fileType": "ppt"
-      },
-      {
-        "id": "pp2",
-        "kind": "file",
-        "name": "budget.xlsx",
-        "parentId": "f02",
-        "modified": "2025-01-10",
+        "name": "intake_janssens.docx",
+        "parentId": "p2",
+        "modified": "2023-05-14",
         "size": "54 KB",
-        "fileType": "excel"
-      },
-      {
-        "id": "bi1",
-        "kind": "file",
-        "name": "nascholing_notities.docx",
-        "parentId": "f04",
-        "modified": "2024-12-02",
-        "size": "39 KB",
         "fileType": "word"
       }
     ]
@@ -115,32 +57,31 @@
     "checks": [
       {
         "op": "itemMoved",
-        "itemName": "poster.pptx",
-        "fromParentName": "02 - PROJECTEN",
-        "toParentName": "04 - BIJSCHOLINGEN"
+        "itemName": "intake_janssens.docx",
+        "toParentName": "Archief"
       }
     ]
   },
   "tips": [
     {
-      "target": "folderRow:02 - PROJECTEN",
-      "text": "Open eerst de map 02 - PROJECTEN."
+      "target": "folderRow:Cliënten",
+      "text": "Open de map Cliënten."
     },
     {
-      "target": "itemMore:poster.pptx",
-      "text": "Tik op de drie puntjes (…) naast poster.pptx."
+      "target": "folderRow:Dossiers",
+      "text": "Open de map Dossiers."
+    },
+    {
+      "target": "itemMore:intake_janssens.docx",
+      "text": "Tik op … naast het bestand."
     },
     {
       "target": "contextAction:Verplaatsen",
       "text": "Kies Verplaatsen."
     },
     {
-      "target": "folderPickerRow:04 - BIJSCHOLINGEN",
-      "text": "Kies 04 - BIJSCHOLINGEN als doelmap."
-    },
-    {
-      "target": "folderPickerConfirm",
-      "text": "Bevestig verplaatsen."
+      "target": "folderPickerRow:Archief",
+      "text": "Kies Archief."
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "id": "ex05",
-  "title": "Verplaatsen vanuit root",
+  "title": "Boekhouder – verplaatsen",
   "type": "move",
-  "instruction": "Verplaats het bestand \"verslag.docx\" in Mijn bestanden naar de map \"01 - LESOPDRACHT\".",
+  "instruction": "Verplaats het bestand \"factuur_januari.pdf\" naar de map \"Facturen\".",
   "ui": {
     "language": "nl-BE",
     "startLocation": "mijn_bestanden",
@@ -12,95 +12,37 @@
     "rootId": "root",
     "items": [
       {
-        "id": "f01",
+        "id": "b1",
         "kind": "folder",
-        "name": "01 - LESOPDRACHT",
+        "name": "Boekhouding",
         "parentId": "root",
-        "modified": "2024-08-29",
-        "size": "349,3 MB"
+        "modified": "2024-09-01",
+        "size": "—"
       },
       {
-        "id": "f02",
+        "id": "b2",
         "kind": "folder",
-        "name": "02 - PROJECTEN",
-        "parentId": "root",
-        "modified": "2023-09-28",
-        "size": "2,05 GB"
+        "name": "2024",
+        "parentId": "b1",
+        "modified": "2024-09-01",
+        "size": "—"
       },
       {
-        "id": "f04",
+        "id": "b3",
         "kind": "folder",
-        "name": "04 - BIJSCHOLINGEN",
-        "parentId": "root",
-        "modified": "2023-08-04",
-        "size": "1,58 GB"
+        "name": "Facturen",
+        "parentId": "b2",
+        "modified": "2024-09-01",
+        "size": "—"
       },
       {
-        "id": "f05",
-        "kind": "folder",
-        "name": "05 - MEDIA",
-        "parentId": "root",
-        "modified": "2023-08-02",
-        "size": "134,4 MB"
-      },
-      {
-        "id": "f06",
-        "kind": "folder",
-        "name": "06 - BEZIG",
-        "parentId": "root",
-        "modified": "2023-08-24",
-        "size": "8,93 GB"
-      },
-      {
-        "id": "f07",
-        "kind": "folder",
-        "name": "07 - Videoprojecten",
-        "parentId": "root",
-        "modified": "2025-01-16",
-        "size": "467,2 MB"
-      },
-      {
-        "id": "fapps",
-        "kind": "folder",
-        "name": "Apps",
-        "parentId": "root",
-        "modified": "2024-10-22",
-        "size": "0 KB"
-      },
-      {
-        "id": "fatt",
-        "kind": "folder",
-        "name": "Attachments",
-        "parentId": "root",
-        "modified": "2024-10-22",
-        "size": "51,2 MB"
-      },
-      {
-        "id": "mv1",
+        "id": "b4",
         "kind": "file",
-        "name": "verslag.docx",
+        "name": "factuur_januari.pdf",
         "parentId": "root",
-        "modified": "2025-01-28",
-        "size": "63 KB",
-        "fileType": "word"
-      },
-      {
-        "id": "mv2",
-        "kind": "file",
-        "name": "schema_toetsen.pdf",
-        "parentId": "root",
-        "modified": "2025-01-15",
-        "size": "201 KB",
+        "modified": "2024-02-03",
+        "size": "312 KB",
         "fileType": "pdf"
-      },
-      {
-        "id": "lf1",
-        "kind": "file",
-        "name": "lesplanning_week3.xlsx",
-        "parentId": "f01",
-        "modified": "2025-01-20",
-        "size": "88 KB",
-        "fileType": "excel"
       }
     ]
   },
@@ -115,28 +57,27 @@
     "checks": [
       {
         "op": "itemMoved",
-        "itemName": "verslag.docx",
-        "fromParentName": "Mijn bestanden",
-        "toParentName": "01 - LESOPDRACHT"
+        "itemName": "factuur_januari.pdf",
+        "toParentName": "Facturen"
       }
     ]
   },
   "tips": [
     {
-      "target": "itemMore:verslag.docx",
-      "text": "Tik op de drie puntjes (…) naast verslag.docx."
+      "target": "itemMore:factuur_januari.pdf",
+      "text": "Tik op … naast het bestand."
     },
     {
       "target": "contextAction:Verplaatsen",
       "text": "Kies Verplaatsen."
     },
     {
-      "target": "folderPickerRow:Mijn bestanden",
-      "text": "Je zit al in Mijn bestanden. Kies de juiste doelmap."
+      "target": "folderPickerRow:Boekhouding",
+      "text": "Open Boekhouding."
     },
     {
-      "target": "folderPickerRow:01 - LESOPDRACHT",
-      "text": "Tik op 01 - LESOPDRACHT als doelmap."
+      "target": "folderPickerRow:Facturen",
+      "text": "Kies Facturen."
     },
     {
       "target": "folderPickerConfirm",

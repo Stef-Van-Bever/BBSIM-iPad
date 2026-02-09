@@ -1,8 +1,8 @@
 {
   "id": "ex02",
-  "title": "Mappen maken 2",
+  "title": "Leerkracht – mappenstructuur",
   "type": "create_folder",
-  "instruction": "Maak in de map \"01 - LESOPDRACHT\" een map \"THEMA 1\". Maak daarin 2 submappen: \"TEKST\" en \"AFBEELDINGEN\".",
+  "instruction": "Maak in de map \"Lesmateriaal\" een map \"2A\". Maak daarin de submappen \"Toetsen\" en \"Werkbladen\".",
   "ui": {
     "language": "nl-BE",
     "startLocation": "mijn_bestanden",
@@ -12,95 +12,29 @@
     "rootId": "root",
     "items": [
       {
-        "id": "f01",
-        "kind": "folder",
-        "name": "01 - LESOPDRACHT",
-        "parentId": "root",
-        "modified": "2024-08-29",
-        "size": "349,3 MB"
-      },
-      {
-        "id": "f02",
-        "kind": "folder",
-        "name": "02 - PROJECTEN",
-        "parentId": "root",
-        "modified": "2023-09-28",
-        "size": "2,05 GB"
-      },
-      {
-        "id": "f04",
-        "kind": "folder",
-        "name": "04 - BIJSCHOLINGEN",
-        "parentId": "root",
-        "modified": "2023-08-04",
-        "size": "1,58 GB"
-      },
-      {
-        "id": "f05",
-        "kind": "folder",
-        "name": "05 - MEDIA",
-        "parentId": "root",
-        "modified": "2023-08-02",
-        "size": "134,4 MB"
-      },
-      {
-        "id": "f06",
-        "kind": "folder",
-        "name": "06 - BEZIG",
-        "parentId": "root",
-        "modified": "2023-08-24",
-        "size": "8,93 GB"
-      },
-      {
-        "id": "f07",
-        "kind": "folder",
-        "name": "07 - Videoprojecten",
-        "parentId": "root",
-        "modified": "2025-01-16",
-        "size": "467,2 MB"
-      },
-      {
-        "id": "fapps",
-        "kind": "folder",
-        "name": "Apps",
-        "parentId": "root",
-        "modified": "2024-10-22",
-        "size": "0 KB"
-      },
-      {
-        "id": "fatt",
-        "kind": "folder",
-        "name": "Attachments",
-        "parentId": "root",
-        "modified": "2024-10-22",
-        "size": "51,2 MB"
-      },
-      {
         "id": "l1",
-        "kind": "file",
-        "name": "lesfiche_thema0.docx",
-        "parentId": "f01",
-        "modified": "2024-09-03",
-        "size": "74 KB",
-        "fileType": "word"
+        "kind": "folder",
+        "name": "School",
+        "parentId": "root",
+        "modified": "2024-09-01",
+        "size": "—"
       },
       {
         "id": "l2",
-        "kind": "file",
-        "name": "oefeningen_thema0.pdf",
-        "parentId": "f01",
-        "modified": "2024-09-03",
-        "size": "418 KB",
-        "fileType": "pdf"
+        "kind": "folder",
+        "name": "Lesmateriaal",
+        "parentId": "l1",
+        "modified": "2024-09-01",
+        "size": "—"
       },
       {
-        "id": "m1",
+        "id": "l3",
         "kind": "file",
-        "name": "klasfoto.jpg",
-        "parentId": "f05",
-        "modified": "2024-05-21",
-        "size": "2,1 MB",
-        "fileType": "image"
+        "name": "jaarplanning.docx",
+        "parentId": "l2",
+        "modified": "2024-08-20",
+        "size": "88 KB",
+        "fileType": "word"
       }
     ]
   },
@@ -115,29 +49,33 @@
     "checks": [
       {
         "op": "folderExists",
-        "parentName": "01 - LESOPDRACHT",
-        "name": "THEMA 1"
+        "parentName": "Lesmateriaal",
+        "name": "2A"
       },
       {
         "op": "folderExists",
-        "parentName": "THEMA 1",
-        "name": "TEKST"
+        "parentName": "2A",
+        "name": "Toetsen"
       },
       {
         "op": "folderExists",
-        "parentName": "THEMA 1",
-        "name": "AFBEELDINGEN"
+        "parentName": "2A",
+        "name": "Werkbladen"
       }
     ]
   },
   "tips": [
     {
-      "target": "folderRow:01 - LESOPDRACHT",
-      "text": "Open eerst de map 01 - LESOPDRACHT."
+      "target": "folderRow:School",
+      "text": "Open de map School."
+    },
+    {
+      "target": "folderRow:Lesmateriaal",
+      "text": "Open de map Lesmateriaal."
     },
     {
       "target": "fabPlus",
-      "text": "Tik op de blauwe + knop."
+      "text": "Tik op + om een nieuwe map te maken."
     },
     {
       "target": "sheetNewAdd:Map",
@@ -145,35 +83,7 @@
     },
     {
       "target": "dialogNewFolder:nameInput",
-      "text": "Maak de map THEMA 1 aan."
-    },
-    {
-      "target": "folderRow:THEMA 1",
-      "text": "Open nu de map THEMA 1."
-    },
-    {
-      "target": "fabPlus",
-      "text": "Tik opnieuw op +."
-    },
-    {
-      "target": "sheetNewAdd:Map",
-      "text": "Kies opnieuw Map."
-    },
-    {
-      "target": "dialogNewFolder:nameInput",
-      "text": "Maak de submap TEKST aan."
-    },
-    {
-      "target": "fabPlus",
-      "text": "Nog een submap: tik weer op +."
-    },
-    {
-      "target": "sheetNewAdd:Map",
-      "text": "Kies Map."
-    },
-    {
-      "target": "dialogNewFolder:nameInput",
-      "text": "Maak de submap AFBEELDINGEN aan."
+      "text": "Maak de map 2A."
     }
   ]
 }

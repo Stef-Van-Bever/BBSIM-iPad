@@ -21,3 +21,9 @@ Tip: laat Codex eerst **1 oefening end-to-end** bouwen (bv. ex01) en pas daarna 
 ## Seed-configs
 Er zit nu ook een map `seed_exercises/` in met volledig ingevulde `ex01.json` … `ex08.json`.
 Daarnaast zijn de JSON’s in `config_templates/` overschreven met de uitgewerkte versies (de originele skeletten staan in `config_templates_skeleton_backup/`).
+
+
+## Laatste update (clean repository)
+- Seed-exercises vervangen door **v2 realistische contexten**
+- `config_templates/` bevat nu volledig uitgewerkte oefeningen
+- Nieuwe map `docs/feedback-spec.md` met gedifferentieerde foutfeedback (A–E)

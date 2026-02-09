@@ -1,8 +1,8 @@
 {
   "id": "ex01",
-  "title": "Mappen maken 1",
+  "title": "Student – map maken",
   "type": "create_folder",
-  "instruction": "Maak in de map \"02 - PROJECTEN\" een nieuwe map met de naam \"WISKUNDE\".",
+  "instruction": "Maak in de map \"Semester 1\" een nieuwe map met de naam \"Wiskunde\".",
   "ui": {
     "language": "nl-BE",
     "startLocation": "mijn_bestanden",
@@ -12,104 +12,37 @@
     "rootId": "root",
     "items": [
       {
-        "id": "f01",
+        "id": "f1",
         "kind": "folder",
-        "name": "01 - LESOPDRACHT",
+        "name": "Studies",
         "parentId": "root",
-        "modified": "2024-08-29",
-        "size": "349,3 MB"
+        "modified": "2024-09-01",
+        "size": "—"
       },
       {
-        "id": "f02",
+        "id": "f2",
         "kind": "folder",
-        "name": "02 - PROJECTEN",
+        "name": "Persoonlijk",
         "parentId": "root",
-        "modified": "2023-09-28",
-        "size": "2,05 GB"
+        "modified": "2024-09-01",
+        "size": "—"
       },
       {
-        "id": "f04",
+        "id": "f3",
         "kind": "folder",
-        "name": "04 - BIJSCHOLINGEN",
-        "parentId": "root",
-        "modified": "2023-08-04",
-        "size": "1,58 GB"
+        "name": "Semester 1",
+        "parentId": "f1",
+        "modified": "2024-09-01",
+        "size": "—"
       },
       {
-        "id": "f05",
-        "kind": "folder",
-        "name": "05 - MEDIA",
-        "parentId": "root",
-        "modified": "2023-08-02",
-        "size": "134,4 MB"
-      },
-      {
-        "id": "f06",
-        "kind": "folder",
-        "name": "06 - BEZIG",
-        "parentId": "root",
-        "modified": "2023-08-24",
-        "size": "8,93 GB"
-      },
-      {
-        "id": "f07",
-        "kind": "folder",
-        "name": "07 - Videoprojecten",
-        "parentId": "root",
-        "modified": "2025-01-16",
-        "size": "467,2 MB"
-      },
-      {
-        "id": "fapps",
-        "kind": "folder",
-        "name": "Apps",
-        "parentId": "root",
-        "modified": "2024-10-22",
-        "size": "0 KB"
-      },
-      {
-        "id": "fatt",
-        "kind": "folder",
-        "name": "Attachments",
-        "parentId": "root",
-        "modified": "2024-10-22",
-        "size": "51,2 MB"
-      },
-      {
-        "id": "r1",
+        "id": "s1",
         "kind": "file",
-        "name": "rooster_1e_graad.pdf",
-        "parentId": "root",
-        "modified": "2025-01-12",
-        "size": "312 KB",
+        "name": "planning_sem1.pdf",
+        "parentId": "f3",
+        "modified": "2024-09-15",
+        "size": "420 KB",
         "fileType": "pdf"
-      },
-      {
-        "id": "r2",
-        "kind": "file",
-        "name": "verslag_teamoverleg.docx",
-        "parentId": "root",
-        "modified": "2025-01-30",
-        "size": "58 KB",
-        "fileType": "word"
-      },
-      {
-        "id": "p1",
-        "kind": "file",
-        "name": "projectplanning.xlsx",
-        "parentId": "f02",
-        "modified": "2024-11-02",
-        "size": "96 KB",
-        "fileType": "excel"
-      },
-      {
-        "id": "p2",
-        "kind": "file",
-        "name": "materiaal_lijst.docx",
-        "parentId": "f02",
-        "modified": "2024-10-14",
-        "size": "41 KB",
-        "fileType": "word"
       }
     ]
   },
@@ -124,19 +57,23 @@
     "checks": [
       {
         "op": "folderExists",
-        "parentName": "02 - PROJECTEN",
-        "name": "WISKUNDE"
+        "parentName": "Semester 1",
+        "name": "Wiskunde"
       }
     ]
   },
   "tips": [
     {
-      "target": "folderRow:02 - PROJECTEN",
-      "text": "Open eerst de map 02 - PROJECTEN."
+      "target": "folderRow:Studies",
+      "text": "Open eerst de map Studies."
+    },
+    {
+      "target": "folderRow:Semester 1",
+      "text": "Open de map Semester 1."
     },
     {
       "target": "fabPlus",
-      "text": "Tik op de blauwe + knop."
+      "text": "Tik op + om een nieuwe map te maken."
     },
     {
       "target": "sheetNewAdd:Map",
@@ -144,7 +81,7 @@
     },
     {
       "target": "dialogNewFolder:nameInput",
-      "text": "Typ WISKUNDE en bevestig."
+      "text": "Typ Wiskunde en bevestig."
     }
   ]
 }

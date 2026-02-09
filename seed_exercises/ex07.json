@@ -1,8 +1,8 @@
 {
   "id": "ex07",
-  "title": "Verwijderen in root",
+  "title": "Elektricien – verwijderen",
   "type": "delete",
-  "instruction": "Verwijder het bestand \"oud_schema.pdf\" in Mijn bestanden.",
+  "instruction": "Verwijder het bestand \"oude_offerte.pdf\".",
   "ui": {
     "language": "nl-BE",
     "startLocation": "mijn_bestanden",
@@ -12,85 +12,29 @@
     "rootId": "root",
     "items": [
       {
-        "id": "f01",
+        "id": "e1",
         "kind": "folder",
-        "name": "01 - LESOPDRACHT",
+        "name": "Offertes",
         "parentId": "root",
-        "modified": "2024-08-29",
-        "size": "349,3 MB"
+        "modified": "2024-09-01",
+        "size": "—"
       },
       {
-        "id": "f02",
-        "kind": "folder",
-        "name": "02 - PROJECTEN",
-        "parentId": "root",
-        "modified": "2023-09-28",
-        "size": "2,05 GB"
-      },
-      {
-        "id": "f04",
-        "kind": "folder",
-        "name": "04 - BIJSCHOLINGEN",
-        "parentId": "root",
-        "modified": "2023-08-04",
-        "size": "1,58 GB"
-      },
-      {
-        "id": "f05",
-        "kind": "folder",
-        "name": "05 - MEDIA",
-        "parentId": "root",
-        "modified": "2023-08-02",
-        "size": "134,4 MB"
-      },
-      {
-        "id": "f06",
-        "kind": "folder",
-        "name": "06 - BEZIG",
-        "parentId": "root",
-        "modified": "2023-08-24",
-        "size": "8,93 GB"
-      },
-      {
-        "id": "f07",
-        "kind": "folder",
-        "name": "07 - Videoprojecten",
-        "parentId": "root",
-        "modified": "2025-01-16",
-        "size": "467,2 MB"
-      },
-      {
-        "id": "fapps",
-        "kind": "folder",
-        "name": "Apps",
-        "parentId": "root",
-        "modified": "2024-10-22",
-        "size": "0 KB"
-      },
-      {
-        "id": "fatt",
-        "kind": "folder",
-        "name": "Attachments",
-        "parentId": "root",
-        "modified": "2024-10-22",
-        "size": "51,2 MB"
-      },
-      {
-        "id": "d1",
+        "id": "e2",
         "kind": "file",
-        "name": "oud_schema.pdf",
-        "parentId": "root",
-        "modified": "2024-09-12",
-        "size": "164 KB",
+        "name": "oude_offerte.pdf",
+        "parentId": "e1",
+        "modified": "2023-03-12",
+        "size": "221 KB",
         "fileType": "pdf"
       },
       {
-        "id": "d2",
+        "id": "e3",
         "kind": "file",
-        "name": "handleiding_ipad.pdf",
-        "parentId": "root",
-        "modified": "2024-09-02",
-        "size": "1,2 MB",
+        "name": "offerte_2024.pdf",
+        "parentId": "e1",
+        "modified": "2024-01-08",
+        "size": "245 KB",
         "fileType": "pdf"
       }
     ]
@@ -106,15 +50,18 @@
     "checks": [
       {
         "op": "itemDeleted",
-        "itemName": "oud_schema.pdf",
-        "parentName": "Mijn bestanden"
+        "itemName": "oude_offerte.pdf"
       }
     ]
   },
   "tips": [
     {
-      "target": "itemMore:oud_schema.pdf",
-      "text": "Tik op de drie puntjes (…) naast oud_schema.pdf."
+      "target": "folderRow:Offertes",
+      "text": "Open de map Offertes."
+    },
+    {
+      "target": "itemMore:oude_offerte.pdf",
+      "text": "Tik op … naast oude_offerte.pdf."
     },
     {
       "target": "contextAction:Verwijderen",
@@ -122,7 +69,7 @@
     },
     {
       "target": "dialogConfirm:delete",
-      "text": "Bevestig dat je dit bestand wil verwijderen."
+      "text": "Bevestig verwijderen."
     }
   ]
 }

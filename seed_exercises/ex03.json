@@ -1,8 +1,8 @@
 {
   "id": "ex03",
-  "title": "Hernoemen bestand",
+  "title": "Muzikant – hernoemen",
   "type": "rename",
-  "instruction": "Geef het bestand \"werkblad.xlsx\" de naam \"werkblad_af.xlsx\".",
+  "instruction": "Geef het bestand \"demo_v1.mp3\" de naam \"demo_definitief.mp3\".",
   "ui": {
     "language": "nl-BE",
     "startLocation": "mijn_bestanden",
@@ -12,95 +12,30 @@
     "rootId": "root",
     "items": [
       {
-        "id": "f01",
+        "id": "m1",
         "kind": "folder",
-        "name": "01 - LESOPDRACHT",
+        "name": "Muziek",
         "parentId": "root",
-        "modified": "2024-08-29",
-        "size": "349,3 MB"
+        "modified": "2024-09-01",
+        "size": "—"
       },
       {
-        "id": "f02",
-        "kind": "folder",
-        "name": "02 - PROJECTEN",
-        "parentId": "root",
-        "modified": "2023-09-28",
-        "size": "2,05 GB"
-      },
-      {
-        "id": "f04",
-        "kind": "folder",
-        "name": "04 - BIJSCHOLINGEN",
-        "parentId": "root",
-        "modified": "2023-08-04",
-        "size": "1,58 GB"
-      },
-      {
-        "id": "f05",
-        "kind": "folder",
-        "name": "05 - MEDIA",
-        "parentId": "root",
-        "modified": "2023-08-02",
-        "size": "134,4 MB"
-      },
-      {
-        "id": "f06",
-        "kind": "folder",
-        "name": "06 - BEZIG",
-        "parentId": "root",
-        "modified": "2023-08-24",
-        "size": "8,93 GB"
-      },
-      {
-        "id": "f07",
-        "kind": "folder",
-        "name": "07 - Videoprojecten",
-        "parentId": "root",
-        "modified": "2025-01-16",
-        "size": "467,2 MB"
-      },
-      {
-        "id": "fapps",
-        "kind": "folder",
-        "name": "Apps",
-        "parentId": "root",
-        "modified": "2024-10-22",
-        "size": "0 KB"
-      },
-      {
-        "id": "fatt",
-        "kind": "folder",
-        "name": "Attachments",
-        "parentId": "root",
-        "modified": "2024-10-22",
-        "size": "51,2 MB"
-      },
-      {
-        "id": "x1",
+        "id": "m2",
         "kind": "file",
-        "name": "werkblad.xlsx",
-        "parentId": "root",
-        "modified": "2025-02-03",
-        "size": "29 KB",
-        "fileType": "excel"
+        "name": "demo_v1.mp3",
+        "parentId": "m1",
+        "modified": "2024-11-02",
+        "size": "6,2 MB",
+        "fileType": "audio"
       },
       {
-        "id": "x2",
+        "id": "m3",
         "kind": "file",
-        "name": "notities_thema1.docx",
-        "parentId": "root",
-        "modified": "2025-02-02",
-        "size": "52 KB",
-        "fileType": "word"
-      },
-      {
-        "id": "x3",
-        "kind": "file",
-        "name": "foto_klasuitstap.jpg",
-        "parentId": "f05",
-        "modified": "2024-06-10",
-        "size": "1,8 MB",
-        "fileType": "image"
+        "name": "songtekst.txt",
+        "parentId": "m1",
+        "modified": "2024-11-01",
+        "size": "3 KB",
+        "fileType": "text"
       }
     ]
   },
@@ -115,23 +50,27 @@
     "checks": [
       {
         "op": "fileRenamed",
-        "oldName": "werkblad.xlsx",
-        "newName": "werkblad_af.xlsx"
+        "oldName": "demo_v1.mp3",
+        "newName": "demo_definitief.mp3"
       }
     ]
   },
   "tips": [
     {
-      "target": "itemMore:werkblad.xlsx",
-      "text": "Tik op de drie puntjes (…) naast werkblad.xlsx."
+      "target": "folderRow:Muziek",
+      "text": "Open de map Muziek."
+    },
+    {
+      "target": "itemMore:demo_v1.mp3",
+      "text": "Tik op … naast demo_v1.mp3."
     },
     {
       "target": "contextAction:NaamWijzigen",
-      "text": "Kies 'Naam van dit bestand wijzigen'."
+      "text": "Kies Naam wijzigen."
     },
     {
       "target": "dialogRename:nameInput",
-      "text": "Typ werkblad_af.xlsx en bevestig."
+      "text": "Typ demo_definitief.mp3."
     }
   ]
 }
