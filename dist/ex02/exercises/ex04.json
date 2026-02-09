@@ -1,0 +1,75 @@
+{
+    "id": "ex04",
+    "title": "Kunstenaar – map hernoemen",
+    "type": "rename",
+    "instruction": "Geef de map \"Schetsen\" de naam \"Voorstudies\".",
+    "ui": {
+        "language": "nl-BE",
+        "startLocation": "mijn_bestanden",
+        "listView": true
+    },
+    "startTree": {
+        "rootId": "root",
+        "items": [
+            {
+                "id": "k1",
+                "kind": "folder",
+                "name": "Projecten",
+                "parentId": "root",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "k2",
+                "kind": "folder",
+                "name": "Schetsen",
+                "parentId": "k1",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "k3",
+                "kind": "file",
+                "name": "portret1.jpg",
+                "parentId": "k2",
+                "modified": "2024-10-12",
+                "size": "2,1 MB",
+                "fileType": "image"
+            }
+        ]
+    },
+    "allowedActions": {
+        "createFolder": false,
+        "rename": true,
+        "move": false,
+        "delete": false
+    },
+    "goal": {
+        "type": "rename",
+        "checks": [
+            {
+                "op": "folderRenamed",
+                "oldName": "Schetsen",
+                "newName": "Voorstudies"
+            }
+        ]
+    },
+    "tips": [
+        {
+            "target": "folderRow:Projecten",
+            "text": "Open de map Projecten."
+        },
+        {
+            "target": "itemMore:Schetsen",
+            "text": "Tik op … naast Schetsen."
+        },
+        {
+            "target": "contextAction:NaamWijzigen",
+            "text": "Kies Naam wijzigen."
+        },
+        {
+            "target": "dialogRename:nameInput",
+            "text": "Typ Voorstudies."
+        }
+    ]
+}
