@@ -1,0 +1,26 @@
+{
+  "id": "ex05",
+  "title": "Verplaatsen vanuit root",
+  "type": "move",
+  "instruction": "Verplaats het bestand \"verslag.docx\" in Mijn bestanden naar de map \"01 - LESOPDRACHT\".",
+  "ui": {
+    "language": "nl-BE",
+    "startLocation": "mijn_bestanden",
+    "listView": true
+  },
+  "startTree": {
+    "rootId": "root",
+    "items": []
+  },
+  "allowedActions": {
+    "createFolder": false,
+    "rename": false,
+    "move": true,
+    "delete": false
+  },
+  "goal": {
+    "type": "move",
+    "checks": []
+  },
+  "tips": []
+}

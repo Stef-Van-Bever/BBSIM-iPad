@@ -1,0 +1,26 @@
+{
+  "id": "ex02",
+  "title": "Mappen maken 2",
+  "type": "create_folder",
+  "instruction": "Maak in de map \"01 - LESOPDRACHT\" een map \"THEMA 1\". Maak daarin 2 submappen: \"TEKST\" en \"AFBEELDINGEN\".",
+  "ui": {
+    "language": "nl-BE",
+    "startLocation": "mijn_bestanden",
+    "listView": true
+  },
+  "startTree": {
+    "rootId": "root",
+    "items": []
+  },
+  "allowedActions": {
+    "createFolder": true,
+    "rename": false,
+    "move": false,
+    "delete": false
+  },
+  "goal": {
+    "type": "create_folder",
+    "checks": []
+  },
+  "tips": []
+}
