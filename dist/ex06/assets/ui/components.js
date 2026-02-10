@@ -44,6 +44,18 @@ export function highlightElement(el) {
   setTimeout(() => el.classList.remove("highlight"), 1200);
 }
 
+export function pulseTip(el) {
+  if (!el) return;
+  el.classList.add("tip-pulse");
+  setTimeout(() => el.classList.remove("tip-pulse"), 2600);
+}
+
+export function markSuccess(el) {
+  if (!el) return;
+  el.classList.add("success-hit");
+  setTimeout(() => el.classList.remove("success-hit"), 500);
+}
+
 export function markDisabledHit(el) {
   if (!el) return;
   el.classList.add("disabled-hit");

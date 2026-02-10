@@ -11,9 +11,9 @@
   </metadata>
   <organizations default="org">
     <organization identifier="org">
-      <title>Elektricien â€“ verwijderen</title>
+      <title>Elektricien – verwijderen</title>
       <item identifier="item" identifierref="res">
-        <title>Elektricien â€“ verwijderen</title>
+        <title>Elektricien – verwijderen</title>
       </item>
     </organization>
   </organizations>
@@ -44,4 +44,3 @@
     </resource>
   </resources>
 </manifest>
-

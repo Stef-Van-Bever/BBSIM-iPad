@@ -28,7 +28,8 @@ for (const file of exerciseFiles) {
   fs.mkdirSync(outExercisesDir, { recursive: true });
 
   copyRecursive(srcDir, assetsDir);
-  copyRecursive(exercisesDir, outExercisesDir);
+  fs.mkdirSync(outExercisesDir, { recursive: true });
+  fs.copyFileSync(path.join(exercisesDir, file), path.join(outExercisesDir, file));
 
   const title = config.title || exId;
   const launchHtml = launchTemplate
@@ -41,14 +42,7 @@ for (const file of exerciseFiles) {
   fs.writeFileSync(path.join(outDir, "index.html"), launchHtml, "utf8");
   fs.writeFileSync(path.join(outDir, "imsmanifest.xml"), manifest, "utf8");
 
-  const zipName = `${exId}.zip`;
-  const zipPath = path.join(distDir, zipName);
-  if (fs.existsSync(zipPath)) fs.rmSync(zipPath);
-
-  const cmd = `powershell -NoProfile -Command "Compress-Archive -Path '${outDir}\\*' -DestinationPath '${zipPath}'"`;
-  execSync(cmd, { stdio: "inherit" });
-
-  console.log(`Built ${zipName}`);
+  console.log(`Built ${exId} (folder only)`);
 }
 
 function copyRecursive(src, dest) {

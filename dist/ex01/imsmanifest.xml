@@ -11,9 +11,9 @@
   </metadata>
   <organizations default="org">
     <organization identifier="org">
-      <title>Student â€“ map maken</title>
+      <title>Student – map maken</title>
       <item identifier="item" identifierref="res">
-        <title>Student â€“ map maken</title>
+        <title>Student – map maken</title>
       </item>
     </organization>
   </organizations>
@@ -44,4 +44,3 @@
     </resource>
   </resources>
 </manifest>
-

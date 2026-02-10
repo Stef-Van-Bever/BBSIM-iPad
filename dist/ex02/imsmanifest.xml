@@ -11,9 +11,9 @@
   </metadata>
   <organizations default="org">
     <organization identifier="org">
-      <title>Leerkracht â€“ mappenstructuur</title>
+      <title>Leerkracht – mappenstructuur</title>
       <item identifier="item" identifierref="res">
-        <title>Leerkracht â€“ mappenstructuur</title>
+        <title>Leerkracht – mappenstructuur</title>
       </item>
     </organization>
   </organizations>
@@ -44,4 +44,3 @@
     </resource>
   </resources>
 </manifest>
-

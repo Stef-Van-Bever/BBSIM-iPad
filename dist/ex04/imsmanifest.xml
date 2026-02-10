@@ -11,9 +11,9 @@
   </metadata>
   <organizations default="org">
     <organization identifier="org">
-      <title>Kunstenaar â€“ map hernoemen</title>
+      <title>Kunstenaar – map hernoemen</title>
       <item identifier="item" identifierref="res">
-        <title>Kunstenaar â€“ map hernoemen</title>
+        <title>Kunstenaar – map hernoemen</title>
       </item>
     </organization>
   </organizations>
@@ -44,4 +44,3 @@
     </resource>
   </resources>
 </manifest>
-

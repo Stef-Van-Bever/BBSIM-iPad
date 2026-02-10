@@ -451,10 +451,36 @@ body {
   transform: translateX(-50%) translateY(0);
 }
 
+#qaPanel {
+  position: fixed;
+  right: 12px;
+  top: 12px;
+  width: 260px;
+  background: rgba(15, 23, 42, 0.92);
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.4;
+  z-index: 9999;
+}
+
+#qaPanel .qa-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
 .highlight {
   box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.8);
   border-radius: 8px;
   transition: box-shadow 0.2s ease;
+}
+
+.tip-pulse {
+  box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.9), 0 0 18px rgba(250, 204, 21, 0.8);
+  border-radius: 10px;
+  animation: tipPulse 1.2s ease-in-out infinite;
 }
 
 .shake {
@@ -469,9 +495,21 @@ body {
   100% { transform: translateX(0); }
 }
 
+@keyframes tipPulse {
+  0% { box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.6), 0 0 8px rgba(250, 204, 21, 0.4); }
+  50% { box-shadow: 0 0 0 5px rgba(250, 204, 21, 0.95), 0 0 24px rgba(250, 204, 21, 0.9); }
+  100% { box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.6), 0 0 8px rgba(250, 204, 21, 0.4); }
+}
+
 .disabled-hit {
   background: #fee2e2 !important;
   color: #991b1b !important;
+}
+
+.success-hit {
+  background: rgba(22, 163, 74, 0.18) !important;
+  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.55) !important;
+  transition: background 0.1s ease, box-shadow 0.1s ease;
 }
 
 .list-row.error-item {

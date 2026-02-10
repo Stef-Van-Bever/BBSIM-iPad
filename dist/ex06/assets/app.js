@@ -9,6 +9,8 @@ import {
   openModal,
   closeModal,
   highlightElement,
+  pulseTip,
+  markSuccess,
   markDisabledHit,
   markRowError,
   markBreadcrumbWarn,
@@ -20,10 +22,14 @@ const state = {
   vfs: null,
   currentFolderId: null,
   selectedItemId: null,
-  tipsIndex: 0,
+  tipProgress: 0,
   scormApi: null,
   completed: false,
-  pendingMoveTargetId: null
+  pendingMoveTargetId: null,
+  lastCreatedFolderName: null,
+  lastRenamedName: null,
+  lastDeletedName: null,
+  lastMovedName: null
 };
 
 const instructionText = document.getElementById("instructionText");
@@ -58,6 +64,7 @@ const moveConfirm = document.getElementById("moveConfirm");
 
 const tipsButton = document.getElementById("tipsButton");
 const fabPlus = document.getElementById("fabPlus");
+const qaPanel = initQaPanel();
 
 init();
 
@@ -74,6 +81,7 @@ async function init() {
 
   bindGlobalHandlers();
   render();
+  qaUpdate();
 }
 
 function bindGlobalHandlers() {
@@ -107,7 +115,7 @@ function bindGlobalHandlers() {
   });
 
   fabPlus.addEventListener("click", () => {
-    openSheet(sheetNewAdd);
+    runTipAction("fabPlus", fabPlus, () => openSheet(sheetNewAdd));
   });
 
   sheetActionMap.addEventListener("click", (event) => {
@@ -115,9 +123,11 @@ function bindGlobalHandlers() {
       event.stopPropagation();
       return;
     }
-    closeSheet(sheetNewAdd);
-    newFolderInput.value = "";
-    openModal(newFolderDialog);
+    runTipAction("sheetNewAdd:Map", sheetActionMap, () => {
+      closeSheet(sheetNewAdd);
+      newFolderInput.value = "";
+      openModal(newFolderDialog);
+    });
   });
 
   tipsButton.addEventListener("click", () => {
@@ -137,6 +147,7 @@ function bindGlobalHandlers() {
 function render() {
   renderBreadcrumb();
   renderList();
+  qaUpdate();
 }
 
 function renderBreadcrumb() {
@@ -183,7 +194,7 @@ function renderList() {
     moreBtn.addEventListener("click", (event) => {
       event.stopPropagation();
       state.selectedItemId = item.id;
-      openContextMenu(item);
+      runTipAction(`itemMore:${item.name}`, moreBtn, () => openContextMenu(item));
     });
     more.appendChild(moreBtn);
 
@@ -192,8 +203,10 @@ function renderList() {
     if (item.kind === "folder") {
       row.setAttribute("data-tip", `folderRow:${item.name}`);
       row.addEventListener("click", () => {
-        state.currentFolderId = item.id;
-        render();
+        runTipAction(`folderRow:${item.name}`, row, () => {
+          state.currentFolderId = item.id;
+          render();
+        });
       });
     }
 
@@ -218,7 +231,7 @@ function handleRename(event) {
   if (!validateSelectedItem(item, "rename")) return;
   closeSheet(contextMenu);
   renameInput.value = item.name;
-  openModal(renameDialog);
+  runTipAction("contextAction:NaamWijzigen", actionRename, () => openModal(renameDialog));
 }
 
 function confirmRename() {
@@ -227,9 +240,12 @@ function confirmRename() {
   const newName = renameInput.value.trim();
   if (!validateRenameTarget(item, newName)) return;
   state.vfs.renameItem(item.id, newName);
-  closeModal(renameDialog);
-  render();
-  checkProgress();
+  state.lastRenamedName = newName;
+  runTipAction("dialogRename:nameInput", renameConfirm, () => {
+    closeModal(renameDialog);
+    render();
+    checkProgress();
+  });
 }
 
 function handleDelete(event) {
@@ -242,7 +258,7 @@ function handleDelete(event) {
   if (!validateSelectedItem(item, "delete")) return;
   closeSheet(contextMenu);
   deleteText.textContent = `Verwijder ${item.name}?`;
-  openModal(deleteDialog);
+  runTipAction("contextAction:Verwijderen", actionDelete, () => openModal(deleteDialog));
 }
 
 function confirmDelete() {
@@ -250,9 +266,12 @@ function confirmDelete() {
   if (!item) return;
   if (!validateDeleteTarget(item)) return;
   state.vfs.deleteItem(item.id);
-  closeModal(deleteDialog);
-  render();
-  checkProgress();
+  state.lastDeletedName = item.name;
+  runTipAction("dialogConfirm:delete", deleteConfirm, () => {
+    closeModal(deleteDialog);
+    render();
+    checkProgress();
+  });
 }
 
 function handleMove(event) {
@@ -266,7 +285,7 @@ function handleMove(event) {
   closeSheet(contextMenu);
   state.pendingMoveTargetId = null;
   renderFolderPicker();
-  openModal(moveDialog);
+  runTipAction("contextAction:Verplaatsen", actionMove, () => openModal(moveDialog));
 }
 
 function renderFolderPicker() {
@@ -280,9 +299,11 @@ function renderFolderPicker() {
     row.textContent = folder.name;
     row.setAttribute("data-tip", `folderPickerRow:${folder.name}`);
     row.addEventListener("click", () => {
-      state.pendingMoveTargetId = folder.id;
-      Array.from(folderPicker.children).forEach(child => child.classList.remove("highlight"));
-      row.classList.add("highlight");
+      runTipAction(`folderPickerRow:${folder.name}`, row, () => {
+        state.pendingMoveTargetId = folder.id;
+        Array.from(folderPicker.children).forEach(child => child.classList.remove("highlight"));
+        row.classList.add("highlight");
+      });
     });
     folderPicker.appendChild(row);
   }
@@ -297,18 +318,24 @@ function confirmMove() {
   const target = state.vfs.getItem(state.pendingMoveTargetId);
   if (!validateMoveTarget(item, target)) return;
   state.vfs.moveItem(item.id, target.id);
-  closeModal(moveDialog);
-  render();
-  checkProgress();
+  state.lastMovedName = item.name;
+  runTipAction("folderPickerConfirm", moveConfirm, () => {
+    closeModal(moveDialog);
+    render();
+    checkProgress();
+  });
 }
 
 function confirmNewFolder() {
   const name = newFolderInput.value.trim();
   if (!validateNewFolder(name)) return;
   state.vfs.createFolder(state.currentFolderId, name);
-  closeModal(newFolderDialog);
-  render();
-  checkProgress();
+  state.lastCreatedFolderName = name;
+  runTipAction("dialogNewFolder:nameInput", newFolderConfirm, () => {
+    closeModal(newFolderDialog);
+    render();
+    checkProgress();
+  });
 }
 
 function getIconClass(item) {
@@ -425,6 +452,7 @@ function checkProgress() {
     markInstructionPartial();
     showToast("👍 Goed begonnen! Je bent nog niet klaar", 2500);
   }
+  qaUpdate(results);
 }
 
 function checkGoal(check) {
@@ -457,13 +485,14 @@ function checkGoal(check) {
 function showNextTip() {
   const tips = state.config.tips || [];
   if (!tips.length) return;
-  const tip = tips[state.tipsIndex % tips.length];
-  state.tipsIndex++;
+  syncTipProgress(tips);
+  const tip = tips[state.tipProgress];
+  if (!tip) return;
   const el = findTipTarget(tip.target);
-  if (el) {
-    highlightElement(el);
-    showToast(tip.text, 2200);
-  }
+  if (!el || !isTipReady(tip)) return;
+  pulseTip(el);
+  showToast(tip.text, 2200);
+  qaUpdate();
 }
 
 function findTipTarget(target) {
@@ -483,4 +512,111 @@ function findTipTarget(target) {
   if (parts[0] === "folderPickerRow") return Array.from(folderPicker.children).find(c => c.textContent === parts[1]);
   if (target === "folderPickerConfirm") return moveConfirm;
   return null;
+}
+
+function runTipAction(target, el, action) {
+  const tips = state.config?.tips || [];
+  const current = tips[state.tipProgress];
+  if (current && current.target === target) {
+    if (el) markSuccess(el);
+    state.tipProgress++;
+    setTimeout(action, 500);
+    return;
+  }
+  action();
+}
+
+function syncTipProgress(tips) {
+  while (tips[state.tipProgress] && isTipAlreadyDone(tips[state.tipProgress])) {
+    state.tipProgress++;
+  }
+}
+
+function isTipAlreadyDone(tip) {
+  const target = tip.target;
+  const parts = target.split(":");
+  if (target === "fabPlus") return sheetNewAdd.classList.contains("open") || newFolderDialog.classList.contains("open");
+  if (parts[0] === "folderRow") {
+    const path = state.vfs.getPath(state.currentFolderId);
+    return path.includes(parts[1]);
+  }
+  if (parts[0] === "itemMore") {
+    const item = state.vfs.getItem(state.selectedItemId);
+    const modalOpen = renameDialog.classList.contains("open")
+      || deleteDialog.classList.contains("open")
+      || moveDialog.classList.contains("open");
+    return !!item && item.name === parts[1] && (contextMenu.classList.contains("open") || modalOpen);
+  }
+  if (parts[0] === "contextAction") {
+    if (parts[1] === "NaamWijzigen") return renameDialog.classList.contains("open") || !!state.lastRenamedName;
+    if (parts[1] === "Verplaatsen") return moveDialog.classList.contains("open") || !!state.lastMovedName;
+    if (parts[1] === "Verwijderen") return deleteDialog.classList.contains("open") || !!state.lastDeletedName;
+  }
+  if (target === "sheetNewAdd:Map") return newFolderDialog.classList.contains("open") || !!state.lastCreatedFolderName;
+  if (target === "dialogNewFolder:nameInput") return !!state.lastCreatedFolderName;
+  if (target === "dialogRename:nameInput") return !!state.lastRenamedName;
+  if (target === "dialogConfirm:delete") return !!state.lastDeletedName;
+  if (parts[0] === "folderPickerRow") return state.pendingMoveTargetId && getFolderName(state.pendingMoveTargetId) === parts[1];
+  if (target === "folderPickerConfirm") return !!state.lastMovedName;
+  return false;
+}
+
+function isTipReady(tip) {
+  const target = tip.target;
+  const parts = target.split(":");
+  if (target === "fabPlus") return true;
+  if (parts[0] === "folderRow") return !!findTipTarget(target);
+  if (parts[0] === "itemMore") return !!findTipTarget(target);
+  if (parts[0] === "contextAction") return contextMenu.classList.contains("open");
+  if (target === "sheetNewAdd:Map") return sheetNewAdd.classList.contains("open");
+  if (target === "dialogNewFolder:nameInput") return newFolderDialog.classList.contains("open");
+  if (target === "dialogRename:nameInput") return renameDialog.classList.contains("open");
+  if (target === "dialogConfirm:delete") return deleteDialog.classList.contains("open");
+  if (parts[0] === "folderPickerRow") return moveDialog.classList.contains("open");
+  if (target === "folderPickerConfirm") return moveDialog.classList.contains("open") && !!state.pendingMoveTargetId;
+  return !!findTipTarget(target);
+}
+
+function getFolderName(id) {
+  const item = state.vfs.getItem(id);
+  return item ? item.name : "";
+}
+
+function initQaPanel() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("qa") !== "1") return null;
+  const panel = document.createElement("div");
+  panel.id = "qaPanel";
+  panel.innerHTML = `
+    <div class="qa-title">QA Mode</div>
+    <div class="qa-body"></div>
+  `;
+  document.body.appendChild(panel);
+  return panel;
+}
+
+function qaUpdate(results = null) {
+  if (!qaPanel) return;
+  const body = qaPanel.querySelector(".qa-body");
+  if (!body || !state.config || !state.vfs) return;
+
+  const path = state.vfs.getPath(state.currentFolderId);
+  const selected = state.vfs.getItem(state.selectedItemId);
+  const checks = state.config.goal.checks || [];
+  const computed = results || checks.map(checkGoal);
+  const statusLines = checks.map((check, idx) => {
+    const ok = computed[idx] ? "OK" : "NO";
+    return `${idx + 1}. ${check.op} (${ok})`;
+  });
+  const tips = state.config.tips || [];
+  const nextTip = tips[state.tipProgress]?.target || "—";
+
+  body.innerHTML = [
+    `Exercise: ${state.config.id || "—"}`,
+    `Path: ${path.length ? path.join(" / ") : "root"}`,
+    `Selected: ${selected ? selected.name : "—"}`,
+    `Next tip: ${nextTip}`,
+    `Checks:`,
+    ...statusLines
+  ].join("<br />");
 }
