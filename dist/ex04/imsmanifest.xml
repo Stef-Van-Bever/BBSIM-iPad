@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="ex04" version="1.2"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="org">
+    <organization identifier="org">
+      <title>1.15 - Oefening 4: Mappen hernoemen</title>
+      <item identifier="item" identifierref="res">
+        <title>1.15 - Oefening 4: Mappen hernoemen</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="res" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html" />
+      <file href="assets/index.html" />
+      <file href="assets/app.css" />
+      <file href="assets/app.js" />
+      <file href="assets/vfs.js" />
+      <file href="assets/scorm12.js" />
+      <file href="assets/exercises/loader.js" />
+      <file href="assets/ui/components.js" />
+      <file href="assets/ui/styles.css" />
+      <file href="assets/assets/folder_icon.png" />
+      <file href="assets/assets/new_folder_icon.svg" />
+      <file href="assets/assets/Word_icon.png" />
+      <file href="assets/assets/excel_icon.png" />
+      <file href="assets/assets/PowerPoint_icon.png" />
+      <file href="assets/assets/vastleggen_icon.svg" />
+      <file href="assets/assets/uploaden_icon.svg" />
+      <file href="assets/assets/startpagina_icon.svg" />
+      <file href="assets/assets/bibliotheek_icon.svg" />
+      <file href="assets/assets/gedeeld_icon.svg" />
+      <file href="assets/assets/media_icon.svg" />
+      <file href="assets/assets/offline.icon.svg" />
+      <file href="exercises/ex04.json" />
+    </resource>
+  </resources>
+</manifest>
