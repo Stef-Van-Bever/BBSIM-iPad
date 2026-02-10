@@ -11,9 +11,9 @@
   </metadata>
   <organizations default="org">
     <organization identifier="org">
-      <title>Boekhouder – verplaatsen</title>
+      <title>1.15 - Oefening 5: Bestanden verplaatsen</title>
       <item identifier="item" identifierref="res">
-        <title>Boekhouder – verplaatsen</title>
+        <title>1.15 - Oefening 5: Bestanden verplaatsen</title>
       </item>
     </organization>
   </organizations>

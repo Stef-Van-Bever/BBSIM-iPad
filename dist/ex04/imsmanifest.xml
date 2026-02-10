@@ -11,9 +11,9 @@
   </metadata>
   <organizations default="org">
     <organization identifier="org">
-      <title>Kunstenaar – map hernoemen</title>
+      <title>K1.15 - Oefening 4: Mappen hernoemen</title>
       <item identifier="item" identifierref="res">
-        <title>Kunstenaar – map hernoemen</title>
+        <title>K1.15 - Oefening 4: Mappen hernoemen</title>
       </item>
     </organization>
   </organizations>

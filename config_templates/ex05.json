@@ -1,6 +1,7 @@
 {
     "id": "ex05",
-    "title": "Boekhouder – verplaatsen",
+    "title": "1.15 - Oefening 5: Bestanden verplaatsen",
+    "description": "Dit is de OneDrive van een boekhouder. Deze boekhouder wil graag een van zijn facturen verplaatsen naar de juiste map.",
     "type": "move",
     "instruction": "Verplaats het bestand \"factuur_januari.pdf\" naar de map \"Facturen\".",
     "ui": {

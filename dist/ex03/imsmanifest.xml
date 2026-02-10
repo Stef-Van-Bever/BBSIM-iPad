@@ -11,9 +11,9 @@
   </metadata>
   <organizations default="org">
     <organization identifier="org">
-      <title>Muzikant – hernoemen</title>
+      <title>1.15 - Oefening 3: Bestanden hernoemen</title>
       <item identifier="item" identifierref="res">
-        <title>Muzikant – hernoemen</title>
+        <title>1.15 - Oefening 3: Bestanden hernoemen</title>
       </item>
     </organization>
   </organizations>

@@ -1,6 +1,7 @@
 {
     "id": "ex06",
-    "title": "Psycholoog – verplaatsen",
+    "title": "1.15 - Oefening 6: Bestanden verplaatsen",
+    "description": "Dit is de OneDrive van een psycholoog. Deze psycholoog wil graag een van zijn cliëntendossiers verplaatsen naar het archief.",
     "type": "move",
     "instruction": "Verplaats het bestand \"intake_janssens.docx\" naar de map \"Archief\".",
     "ui": {

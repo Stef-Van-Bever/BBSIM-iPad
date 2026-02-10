@@ -8,12 +8,24 @@
 </head>
 <body>
   <div id="app" class="app">
+    <section class="intro-panel" id="introPanel">
+      <div class="intro-card">
+        <div class="intro-title" id="introTitle">Oefening laden...</div>
+        <div class="intro-desc" id="introDescription">Beschrijving laden...</div>
+        <button class="intro-start" id="introStart">Start</button>
+      </div>
+    </section>
+
     <section class="instruction-stack">
       <div class="instruction-emoji" aria-hidden="true">🧑‍💻</div>
       <div class="instruction-content">
         <div class="exercise-title" id="exerciseTitle">Oefening laden...</div>
+        <div class="instruction-desc" id="instructionDescription"></div>
         <div class="instruction-bar">
-          <div class="instruction-text" id="instructionText">Opdracht laden...</div>
+          <div class="instruction-box">
+            <span class="instruction-target" aria-hidden="true">🎯</span>
+            <div class="instruction-text" id="instructionText">Opdracht laden...</div>
+          </div>
           <button class="tips-button" id="tipsButton" data-tip="fabPlus">💡 tips</button>
         </div>
       </div>
@@ -23,12 +35,12 @@
       <header class="topbar">
         <div class="topbar-title">OneDrive</div>
         <nav class="topbar-tabs" aria-label="Hoofd tabs">
-          <button class="tab tab-active">
-            <span class="tab-label">Mijn bestanden</span>
-          </button>
           <button class="tab tab-disabled" data-disabled="true">
             <img src="assets/startpagina_icon.svg" alt="" class="tab-icon" />
             <span class="tab-label">Startpagina</span>
+          </button>
+          <button class="tab tab-active">
+            <span class="tab-label">Mijn bestanden</span>
           </button>
           <button class="tab tab-disabled" data-disabled="true">
             <img src="assets/bibliotheek_icon.svg" alt="" class="tab-icon" />

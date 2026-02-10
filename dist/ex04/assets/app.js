@@ -34,6 +34,10 @@ const state = {
 
 const instructionText = document.getElementById("instructionText");
 const exerciseTitle = document.getElementById("exerciseTitle");
+const instructionDescription = document.getElementById("instructionDescription");
+const introTitle = document.getElementById("introTitle");
+const introDescription = document.getElementById("introDescription");
+const introStart = document.getElementById("introStart");
 const fileList = document.getElementById("fileList");
 const breadcrumb = document.getElementById("breadcrumb");
 const breadcrumbText = document.getElementById("breadcrumbText");
@@ -76,6 +80,10 @@ async function init() {
   state.currentFolderId = state.vfs.rootId;
   instructionText.textContent = config.instruction;
   exerciseTitle.textContent = config.title || "Oefening";
+  instructionDescription.textContent = config.description || "";
+  introTitle.textContent = config.title || "Oefening";
+  introDescription.textContent = config.description || "";
+  document.getElementById("app").classList.add("not-started");
 
   sheetActionMap.dataset.disabled = (!config.allowedActions.createFolder).toString();
 
@@ -132,6 +140,12 @@ function bindGlobalHandlers() {
 
   tipsButton.addEventListener("click", () => {
     showNextTip();
+  });
+
+  introStart.addEventListener("click", () => {
+    const app = document.getElementById("app");
+    app.classList.remove("not-started");
+    app.classList.add("started");
   });
 
   actionRename.addEventListener("click", (event) => handleRename(event));

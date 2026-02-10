@@ -1,6 +1,7 @@
 {
     "id": "ex03",
-    "title": "Muzikant – hernoemen",
+    "title": "1.15 - Oefening 3: Bestanden hernoemen",
+    "description": "Dit is de OneDrive van een muzikant. De muzikant wil graag een van zijn lied hernoemen.",
     "type": "rename",
     "instruction": "Geef het bestand \"demo_v1.mp3\" de naam \"demo_definitief.mp3\".",
     "ui": {

@@ -17,7 +17,15 @@ const exerciseFiles = fs.readdirSync(exercisesDir).filter(f => f.startsWith("ex"
 
 for (const file of exerciseFiles) {
   const exId = path.basename(file, ".json");
-  const config = JSON.parse(fs.readFileSync(path.join(exercisesDir, file), "utf8"));
+  const rawConfig = fs.readFileSync(path.join(exercisesDir, file), "utf8");
+  const configText = rawConfig.replace(/^\uFEFF/, "").replace(/^[\uFFFD]+/, "");
+  let config;
+  try {
+    config = JSON.parse(configText);
+  } catch (err) {
+    console.error(`Invalid JSON in ${file}`);
+    throw err;
+  }
   const outDir = path.join(distDir, exId);
   const assetsDir = path.join(outDir, "assets");
   const outExercisesDir = path.join(outDir, "exercises");

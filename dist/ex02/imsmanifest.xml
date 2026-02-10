@@ -11,9 +11,9 @@
   </metadata>
   <organizations default="org">
     <organization identifier="org">
-      <title>Leerkracht – mappenstructuur</title>
+      <title>1.15 - Oefening 2: Mappen maken</title>
       <item identifier="item" identifierref="res">
-        <title>Leerkracht – mappenstructuur</title>
+        <title>1.15 - Oefening 2: Mappen maken</title>
       </item>
     </organization>
   </organizations>
