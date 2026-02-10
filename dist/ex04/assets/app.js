@@ -78,11 +78,11 @@ async function init() {
   state.config = config;
   state.vfs = createVfs(config.startTree);
   state.currentFolderId = state.vfs.rootId;
-  instructionText.textContent = config.instruction;
+  instructionText.innerHTML = formatFolderNames(config.instruction);
   exerciseTitle.textContent = config.title || "Oefening";
-  instructionDescription.textContent = config.description || "";
+  instructionDescription.innerHTML = formatFolderNames(config.description || "");
   introTitle.textContent = config.title || "Oefening";
-  introDescription.textContent = config.description || "";
+  introDescription.innerHTML = formatFolderNames(config.description || "");
   document.getElementById("app").classList.add("not-started");
 
   sheetActionMap.dataset.disabled = (!config.allowedActions.createFolder).toString();
@@ -429,7 +429,7 @@ function validateMoveTarget(item, target) {
 function validateNewFolder(name) {
   const checks = state.config.goal.checks.filter(c => c.op === "folderExists");
   const current = getCurrentFolderName();
-  const pending = checks.find(c => c.parentName === current);
+  const pending = checks.find(c => c.parentName === current && !isFolderExists(c.parentName, c.name));
   if (!pending && checks.length) {
     markBreadcrumbWarn();
     showToast("⚠️ Je zit niet in de juiste map", 2500);
@@ -441,6 +441,12 @@ function validateNewFolder(name) {
     return false;
   }
   return true;
+}
+
+function isFolderExists(parentName, folderName) {
+  const parent = state.vfs.findByName(parentName, "folder");
+  if (!parent) return false;
+  return state.vfs.getChildren(parent.id).some(i => i.kind === "folder" && i.name === folderName);
 }
 
 function getCurrentFolderName() {
@@ -594,6 +600,11 @@ function isTipReady(tip) {
 function getFolderName(id) {
   const item = state.vfs.getItem(id);
   return item ? item.name : "";
+}
+
+function formatFolderNames(text) {
+  if (!text) return "";
+  return text.replace(/📂\s*"([^"]+)"/g, '<span class="folder-name">📂 $1</span>');
 }
 
 function initQaPanel() {

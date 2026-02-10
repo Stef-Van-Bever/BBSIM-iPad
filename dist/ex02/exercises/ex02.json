@@ -3,7 +3,7 @@
     "title": "1.15 - Oefening 2: Mappen maken",
     "description": "Dit is de OneDrive van een leerkracht. De leerkracht wil graag een nieuwe mapstructuur maken voor het nieuwe schooljaar.",
     "type": "create_folder",
-    "instruction": "Maak in de map 📂\"Lesmateriaal\" een map 📂\"2A\". Maak daarin de submappen 📂\"Toetsen\" en 📂\"Werkbladen\".",
+    "instruction": "Maak in de map 📂\"Lesmateriaal\" een map 📂\"2A\". Maak daarin de submappen \"Toetsen\" en \"Werkbladen\".",
     "ui": {
         "language": "nl-BE",
         "startLocation": "mijn_bestanden",

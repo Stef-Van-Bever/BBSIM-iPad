@@ -1,89 +1,90 @@
 {
-  "id": "ex02",
-  "title": "Leerkracht – mappenstructuur",
-  "type": "create_folder",
-  "instruction": "Maak in de map \"Lesmateriaal\" een map \"2A\". Maak daarin de submappen \"Toetsen\" en \"Werkbladen\".",
-  "ui": {
-    "language": "nl-BE",
-    "startLocation": "mijn_bestanden",
-    "listView": true
-  },
-  "startTree": {
-    "rootId": "root",
-    "items": [
-      {
-        "id": "l1",
-        "kind": "folder",
-        "name": "School",
-        "parentId": "root",
-        "modified": "2024-09-01",
-        "size": "—"
-      },
-      {
-        "id": "l2",
-        "kind": "folder",
-        "name": "Lesmateriaal",
-        "parentId": "l1",
-        "modified": "2024-09-01",
-        "size": "—"
-      },
-      {
-        "id": "l3",
-        "kind": "file",
-        "name": "jaarplanning.docx",
-        "parentId": "l2",
-        "modified": "2024-08-20",
-        "size": "88 KB",
-        "fileType": "word"
-      }
-    ]
-  },
-  "allowedActions": {
-    "createFolder": true,
-    "rename": false,
-    "move": false,
-    "delete": false
-  },
-  "goal": {
+    "id": "ex02",
+    "title": "1.15 - Oefening 2: Mappen maken",
+    "description": "Dit is de OneDrive van een leerkracht. De leerkracht wil graag een nieuwe mapstructuur maken voor het nieuwe schooljaar.",
     "type": "create_folder",
-    "checks": [
-      {
-        "op": "folderExists",
-        "parentName": "Lesmateriaal",
-        "name": "2A"
-      },
-      {
-        "op": "folderExists",
-        "parentName": "2A",
-        "name": "Toetsen"
-      },
-      {
-        "op": "folderExists",
-        "parentName": "2A",
-        "name": "Werkbladen"
-      }
+    "instruction": "Maak in de map \"📂Lesmateriaal\" een map \"📂2A\". Maak daarin de submappen \"📂Toetsen\" en \"📂Werkbladen\".",
+    "ui": {
+        "language": "nl-BE",
+        "startLocation": "mijn_bestanden",
+        "listView": true
+    },
+    "startTree": {
+        "rootId": "root",
+        "items": [
+            {
+                "id": "l1",
+                "kind": "folder",
+                "name": "School",
+                "parentId": "root",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "l2",
+                "kind": "folder",
+                "name": "Lesmateriaal",
+                "parentId": "l1",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "l3",
+                "kind": "file",
+                "name": "jaarplanning.docx",
+                "parentId": "l2",
+                "modified": "2024-08-20",
+                "size": "88 KB",
+                "fileType": "word"
+            }
+        ]
+    },
+    "allowedActions": {
+        "createFolder": true,
+        "rename": false,
+        "move": false,
+        "delete": false
+    },
+    "goal": {
+        "type": "create_folder",
+        "checks": [
+            {
+                "op": "folderExists",
+                "parentName": "Lesmateriaal",
+                "name": "2A"
+            },
+            {
+                "op": "folderExists",
+                "parentName": "2A",
+                "name": "Toetsen"
+            },
+            {
+                "op": "folderExists",
+                "parentName": "2A",
+                "name": "Werkbladen"
+            }
+        ]
+    },
+    "tips": [
+        {
+            "target": "folderRow:School",
+            "text": "Open de map School."
+        },
+        {
+            "target": "folderRow:Lesmateriaal",
+            "text": "Open de map Lesmateriaal."
+        },
+        {
+            "target": "fabPlus",
+            "text": "Tik op + om een nieuwe map te maken."
+        },
+        {
+            "target": "sheetNewAdd:Map",
+            "text": "Kies Map."
+        },
+        {
+            "target": "dialogNewFolder:nameInput",
+            "text": "Maak de map 2A."
+        }
     ]
-  },
-  "tips": [
-    {
-      "target": "folderRow:School",
-      "text": "Open de map School."
-    },
-    {
-      "target": "folderRow:Lesmateriaal",
-      "text": "Open de map Lesmateriaal."
-    },
-    {
-      "target": "fabPlus",
-      "text": "Tik op + om een nieuwe map te maken."
-    },
-    {
-      "target": "sheetNewAdd:Map",
-      "text": "Kies Map."
-    },
-    {
-      "target": "dialogNewFolder:nameInput",
-      "text": "Maak de map 2A."
-    }
-  ]
 }

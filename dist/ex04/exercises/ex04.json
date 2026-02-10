@@ -3,7 +3,7 @@
     "title": "K1.15 - Oefening 4: Mappen hernoemen",
     "description": "Dit is de OneDrive van een kunstenaar. De kunstenaar wil graag een van zijn mappen hernoemen.",
     "type": "rename",
-    "instruction": "Geef de map \"Schetsen\" de naam \"Voorstudies\".",
+    "instruction": "Geef de map \"📂Schetsen\" de naam \"Voorstudies\".",
     "ui": {
         "language": "nl-BE",
         "startLocation": "mijn_bestanden",

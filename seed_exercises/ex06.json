@@ -1,87 +1,88 @@
 {
-  "id": "ex06",
-  "title": "Psycholoog – verplaatsen",
-  "type": "move",
-  "instruction": "Verplaats het bestand \"intake_janssens.docx\" naar de map \"Archief\".",
-  "ui": {
-    "language": "nl-BE",
-    "startLocation": "mijn_bestanden",
-    "listView": true
-  },
-  "startTree": {
-    "rootId": "root",
-    "items": [
-      {
-        "id": "p1",
-        "kind": "folder",
-        "name": "Cliënten",
-        "parentId": "root",
-        "modified": "2024-09-01",
-        "size": "—"
-      },
-      {
-        "id": "p2",
-        "kind": "folder",
-        "name": "Dossiers",
-        "parentId": "p1",
-        "modified": "2024-09-01",
-        "size": "—"
-      },
-      {
-        "id": "p3",
-        "kind": "folder",
-        "name": "Archief",
-        "parentId": "p1",
-        "modified": "2024-09-01",
-        "size": "—"
-      },
-      {
-        "id": "p4",
-        "kind": "file",
-        "name": "intake_janssens.docx",
-        "parentId": "p2",
-        "modified": "2023-05-14",
-        "size": "54 KB",
-        "fileType": "word"
-      }
-    ]
-  },
-  "allowedActions": {
-    "createFolder": false,
-    "rename": false,
-    "move": true,
-    "delete": false
-  },
-  "goal": {
+    "id": "ex06",
+    "title": "1.15 - Oefening 6: Bestanden verplaatsen",
+    "description": "Dit is de OneDrive van een psycholoog. Deze psycholoog wil graag een van zijn cliëntendossiers verplaatsen naar het archief.",
     "type": "move",
-    "checks": [
-      {
-        "op": "itemMoved",
-        "itemName": "intake_janssens.docx",
-        "toParentName": "Archief"
-      }
+    "instruction": "Verplaats het bestand \"intake_janssens.docx\" naar de map \"📂 Archief\".",
+    "ui": {
+        "language": "nl-BE",
+        "startLocation": "mijn_bestanden",
+        "listView": true
+    },
+    "startTree": {
+        "rootId": "root",
+        "items": [
+            {
+                "id": "p1",
+                "kind": "folder",
+                "name": "Cliënten",
+                "parentId": "root",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "p2",
+                "kind": "folder",
+                "name": "Dossiers",
+                "parentId": "p1",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "p3",
+                "kind": "folder",
+                "name": "Archief",
+                "parentId": "p1",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "p4",
+                "kind": "file",
+                "name": "intake_janssens.docx",
+                "parentId": "p2",
+                "modified": "2023-05-14",
+                "size": "54 KB",
+                "fileType": "word"
+            }
+        ]
+    },
+    "allowedActions": {
+        "createFolder": false,
+        "rename": false,
+        "move": true,
+        "delete": false
+    },
+    "goal": {
+        "type": "move",
+        "checks": [
+            {
+                "op": "itemMoved",
+                "itemName": "intake_janssens.docx",
+                "toParentName": "Archief"
+            }
+        ]
+    },
+    "tips": [
+        {
+            "target": "folderRow:Cliënten",
+            "text": "Open de map Cliënten."
+        },
+        {
+            "target": "folderRow:Dossiers",
+            "text": "Open de map Dossiers."
+        },
+        {
+            "target": "itemMore:intake_janssens.docx",
+            "text": "Tik op … naast het bestand."
+        },
+        {
+            "target": "contextAction:Verplaatsen",
+            "text": "Kies Verplaatsen."
+        },
+        {
+            "target": "folderPickerRow:Archief",
+            "text": "Kies Archief."
+        }
     ]
-  },
-  "tips": [
-    {
-      "target": "folderRow:Cliënten",
-      "text": "Open de map Cliënten."
-    },
-    {
-      "target": "folderRow:Dossiers",
-      "text": "Open de map Dossiers."
-    },
-    {
-      "target": "itemMore:intake_janssens.docx",
-      "text": "Tik op … naast het bestand."
-    },
-    {
-      "target": "contextAction:Verplaatsen",
-      "text": "Kies Verplaatsen."
-    },
-    {
-      "target": "folderPickerRow:Archief",
-      "text": "Kies Archief."
-    }
-  ]
 }
