@@ -35,7 +35,7 @@ for (const file of exerciseFiles) {
   fs.mkdirSync(assetsDir, { recursive: true });
   fs.mkdirSync(outExercisesDir, { recursive: true });
 
-  copyRecursive(srcDir, assetsDir);
+  copyRecursive(srcDir, assetsDir, exId);
   fs.mkdirSync(outExercisesDir, { recursive: true });
   fs.copyFileSync(path.join(exercisesDir, file), path.join(outExercisesDir, file));
 
@@ -53,14 +53,23 @@ for (const file of exerciseFiles) {
   console.log(`Built ${exId} (folder only)`);
 }
 
-function copyRecursive(src, dest) {
+function copyRecursive(src, dest, exId) {
   const stat = fs.statSync(src);
   if (stat.isDirectory()) {
     fs.mkdirSync(dest, { recursive: true });
     for (const entry of fs.readdirSync(src)) {
-      copyRecursive(path.join(src, entry), path.join(dest, entry));
+      copyRecursive(path.join(src, entry), path.join(dest, entry), exId);
     }
   } else {
+    if (shouldSkipFile(src, exId)) return;
     fs.copyFileSync(src, dest);
   }
+}
+
+function shouldSkipFile(srcPath, exId) {
+  const base = path.basename(srcPath);
+  if (!base.includes("_intro.")) return false;
+  if (base.startsWith(`${exId}_intro.`)) return false;
+  const assetsRoot = path.join(srcDir, "assets") + path.sep;
+  return srcPath.startsWith(assetsRoot);
 }

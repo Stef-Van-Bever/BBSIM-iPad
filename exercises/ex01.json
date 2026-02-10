@@ -1,9 +1,9 @@
 {
     "id": "ex01",
     "title": "1.15 - Oefening 1: Nieuwe map maken",
-    "description": "Dit is de map van een student. de student wil graag een nieuwe map 📂 Wiskunde in de map 📂 semester 1.",
+    "description": "Dit is de map van een student. Deze student wil graag een nieuwe map om alle taken van wiskunde te bewaren",
     "type": "create_folder",
-    "instruction": "Maak in de map 📂\" Studies\" \\ 📂\"Semester 1\" een nieuwe map met de naam \"Wiskunde\".",
+    "instruction": "Maak in de map 📂\" Studies\"  een nieuwe map met de naam \"Wiskunde\".",
     "ui": {
         "language": "nl-BE",
         "startLocation": "mijn_bestanden",
@@ -31,7 +31,7 @@
             {
                 "id": "f3",
                 "kind": "folder",
-                "name": "Semester 1",
+                "name": "Natuuwetenschappen",
                 "parentId": "f1",
                 "modified": "2024-09-01",
                 "size": "—"
@@ -40,10 +40,26 @@
                 "id": "s1",
                 "kind": "file",
                 "name": "planning_sem1.pdf",
-                "parentId": "f3",
+                "parentId": "f1",
                 "modified": "2024-09-15",
                 "size": "420 KB",
                 "fileType": "pdf"
+            },
+            {
+                "id": "f5",
+                "kind": "folder",
+                "name": "Engels",
+                "parentId": "f1",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "f6",
+                "kind": "folder",
+                "name": "Frans",
+                "parentId": "f1",
+                "modified": "2024-09-01",
+                "size": "—"
             }
         ]
     },
@@ -58,7 +74,7 @@
         "checks": [
             {
                 "op": "folderExists",
-                "parentName": "Semester 1",
+                "parentName": "Studies",
                 "name": "Wiskunde"
             }
         ]

@@ -38,6 +38,7 @@ const instructionDescription = document.getElementById("instructionDescription")
 const introTitle = document.getElementById("introTitle");
 const introDescription = document.getElementById("introDescription");
 const introStart = document.getElementById("introStart");
+const introImage = document.getElementById("introImage");
 const fileList = document.getElementById("fileList");
 const breadcrumb = document.getElementById("breadcrumb");
 const breadcrumbText = document.getElementById("breadcrumbText");
@@ -85,6 +86,7 @@ async function init() {
   instructionDescription.innerHTML = formatFolderNames(config.description || "");
   introTitle.textContent = config.title || "Oefening";
   introDescription.innerHTML = formatFolderNames(config.description || "");
+  setIntroImage(config.id);
   document.getElementById("app").classList.add("not-started");
 
   sheetActionMap.dataset.disabled = (!config.allowedActions.createFolder).toString();
@@ -614,6 +616,18 @@ function isTipReady(tip) {
 function getFolderName(id) {
   const item = state.vfs.getItem(id);
   return item ? item.name : "";
+}
+
+function setIntroImage(exId) {
+  if (!introImage) return;
+  const src = `assets/${exId}_intro.png`;
+  introImage.onload = () => {
+    introImage.style.display = "block";
+  };
+  introImage.onerror = () => {
+    introImage.style.display = "none";
+  };
+  introImage.src = src;
 }
 
 function formatFolderNames(text) {
