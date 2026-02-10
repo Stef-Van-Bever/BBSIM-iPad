@@ -111,11 +111,11 @@
           <img src="assets/excel_icon.png" alt="" class="sheet-icon" />
           <span>Excel-werkblad</span>
         </div>
-        <div class="sheet-list-item" data-disabled="true">
+        <div class="sheet-list-item" id="actionNewPowerPoint" data-disabled="true">
           <img src="assets/PowerPoint_icon.png" alt="" class="sheet-icon" />
           <span>PowerPoint-presentatie</span>
         </div>
-        <div class="sheet-list-item" data-disabled="true">
+        <div class="sheet-list-item" id="actionNewText" data-disabled="true">
           <span class="sheet-icon sheet-icon-text">TXT</span>
           <span>Tekstbestand</span>
         </div>
@@ -127,11 +127,26 @@
       <div class="sheet-handle"></div>
       <div class="sheet-title" id="contextTitle">Acties</div>
       <div class="sheet-list">
-        <button class="sheet-list-item" id="actionRename" data-tip="contextAction:NaamWijzigen">Naam wijzigen</button>
-        <button class="sheet-list-item" id="actionMove" data-tip="contextAction:Verplaatsen">Verplaatsen</button>
-        <button class="sheet-list-item" id="actionDelete" data-tip="contextAction:Verwijderen">Verwijderen</button>
-        <button class="sheet-list-item" id="actionShare" data-disabled="true">Delen</button>
-        <button class="sheet-list-item" id="actionOffline" data-disabled="true">Offline beschikbaar maken</button>
+        <button class="sheet-list-item" id="actionRename" data-tip="contextAction:NaamWijzigen">
+          <img src="assets/naam_wijzigen_icon.svg" alt="" class="sheet-icon" />
+          Naam wijzigen
+        </button>
+        <button class="sheet-list-item" id="actionMove" data-tip="contextAction:Verplaatsen">
+          <img src="assets/verplaatsen_icon.svg" alt="" class="sheet-icon" />
+          Verplaatsen
+        </button>
+        <button class="sheet-list-item" id="actionDelete" data-tip="contextAction:Verwijderen">
+          <img src="assets/verwijderen_icon.svg" alt="" class="sheet-icon" />
+          Verwijderen
+        </button>
+        <button class="sheet-list-item" id="actionShare" data-disabled="true">
+          <img src="assets/delen_icon.svg" alt="" class="sheet-icon" />
+          Delen
+        </button>
+        <button class="sheet-list-item" id="actionOffline" data-disabled="true">
+          <img src="assets/offline.icon.svg" alt="" class="sheet-icon" />
+          Offline beschikbaar maken
+        </button>
       </div>
       <button class="sheet-cancel" data-sheet-close="true">Annuleer</button>
     </div>

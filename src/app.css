@@ -46,49 +46,53 @@ body {
 }
 
 .intro-panel {
-  position: fixed;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  padding: 24px;
-  background: linear-gradient(180deg, rgba(245, 246, 248, 0.8), rgba(238, 241, 246, 0.95));
-  z-index: 50;
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: linear-gradient(
+        180deg,
+        rgba(245, 246, 248, 0.8),
+        rgba(238, 241, 246, 0.95)
+    );
+    z-index: 50;
 }
 
 .intro-card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 22px 24px;
-  box-shadow: var(--shadow);
-  display: grid;
-  gap: 12px;
-  width: min(520px, 92vw);
-  text-align: center;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 22px 24px;
+    box-shadow: var(--shadow);
+    display: grid;
+    gap: 12px;
+    width: min(520px, 92vw);
+    text-align: center;
 }
 
 .intro-emoji {
-  font-size: 36px;
+    font-size: 36px;
 }
 
 .intro-image {
-  width: 100%;
-  max-height: 220px;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 1px solid var(--line);
-  display: none;
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    display: none;
 }
 
 .intro-title {
-  font-size: 22px;
-  font-weight: 700;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 .intro-desc {
-    color: var(--muted);
-    font-size: 15px;
-    line-height: 1.4;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.4;
 }
 
 .intro-start {
@@ -155,7 +159,7 @@ body {
 .topbar-title {
     font-size: 22px;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -610,7 +614,7 @@ body {
 body.shake .instruction-stack,
 body.shake .intro-panel,
 body.shake .app-panel {
-  animation: shake 0.25s linear;
+    animation: shake 0.25s linear;
 }
 
 @keyframes shake {

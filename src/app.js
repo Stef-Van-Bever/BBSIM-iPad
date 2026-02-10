@@ -52,6 +52,8 @@ const actionMove = document.getElementById("actionMove");
 const actionDelete = document.getElementById("actionDelete");
 const actionShare = document.getElementById("actionShare");
 const actionOffline = document.getElementById("actionOffline");
+const actionNewPowerPoint = document.getElementById("actionNewPowerPoint");
+const actionNewText = document.getElementById("actionNewText");
 
 const renameDialog = document.getElementById("renameDialog");
 const renameInput = document.getElementById("renameInput");
@@ -116,6 +118,10 @@ function bindGlobalHandlers() {
       closeModal(deleteDialog);
       closeModal(moveDialog);
     }
+
+    if (contextMenu.classList.contains("open") && !contextMenu.contains(event.target)) {
+      closeSheet(contextMenu);
+    }
   });
 
   backButton.addEventListener("click", () => {
@@ -163,6 +169,14 @@ function bindGlobalHandlers() {
   actionOffline.addEventListener("click", (event) => {
     event.preventDefault();
     triggerDisabledFeedback(actionOffline);
+  });
+  actionNewPowerPoint.addEventListener("click", (event) => {
+    event.preventDefault();
+    triggerDisabledFeedback(actionNewPowerPoint);
+  });
+  actionNewText.addEventListener("click", (event) => {
+    event.preventDefault();
+    triggerDisabledFeedback(actionNewText);
   });
 
   renameConfirm.addEventListener("click", () => confirmRename());
