@@ -3,7 +3,7 @@
     "title": "1.15 - Oefening 5: Bestanden verplaatsen",
     "description": "Dit is de OneDrive van een boekhouder. Deze boekhouder wil graag een van zijn facturen verplaatsen naar de juiste map.",
     "type": "move",
-    "instruction": "Verplaats het bestand \"factuur_januari.pdf\" naar de map \"📂 Facturen\".",
+    "instruction": "Verplaats het bestand \"factuur_januari\" naar de map \"📂Boekhouding\\📂 Facturen\".",
     "ui": {
         "language": "nl-BE",
         "startLocation": "mijn_bestanden",
@@ -39,7 +39,7 @@
             {
                 "id": "b4",
                 "kind": "file",
-                "name": "factuur_januari.pdf",
+                "name": "factuur_januari",
                 "parentId": "root",
                 "modified": "2024-02-03",
                 "size": "312 KB",
@@ -58,14 +58,14 @@
         "checks": [
             {
                 "op": "itemMoved",
-                "itemName": "factuur_januari.pdf",
+                "itemName": "factuur_januari",
                 "toParentName": "Facturen"
             }
         ]
     },
     "tips": [
         {
-            "target": "itemMore:factuur_januari.pdf",
+            "target": "itemMore:factuur_januari",
             "text": "Tik op … naast het bestand."
         },
         {

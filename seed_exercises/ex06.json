@@ -3,7 +3,7 @@
     "title": "1.15 - Oefening 6: Bestanden verplaatsen",
     "description": "Dit is de OneDrive van een psycholoog. Deze psycholoog wil graag een van zijn cliëntendossiers verplaatsen naar het archief.",
     "type": "move",
-    "instruction": "Verplaats het bestand \"intake_janssens.docx\" naar de map \"📂 Archief\".",
+    "instruction": "Open de map \"📂Cliënten\\📂Dossiers\" en verplaats het bestand \"intake_janssens\" naar de map \"📂Archief\".",
     "ui": {
         "language": "nl-BE",
         "startLocation": "mijn_bestanden",
@@ -39,7 +39,7 @@
             {
                 "id": "p4",
                 "kind": "file",
-                "name": "intake_janssens.docx",
+                "name": "intake_janssens",
                 "parentId": "p2",
                 "modified": "2023-05-14",
                 "size": "54 KB",
@@ -58,7 +58,7 @@
         "checks": [
             {
                 "op": "itemMoved",
-                "itemName": "intake_janssens.docx",
+                "itemName": "intake_janssens",
                 "toParentName": "Archief"
             }
         ]
@@ -73,7 +73,7 @@
             "text": "Open de map Dossiers."
         },
         {
-            "target": "itemMore:intake_janssens.docx",
+            "target": "itemMore:intake_janssens.",
             "text": "Tik op … naast het bestand."
         },
         {

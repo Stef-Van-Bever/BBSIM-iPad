@@ -49,6 +49,8 @@ const contextMenu = document.getElementById("contextMenu");
 const actionRename = document.getElementById("actionRename");
 const actionMove = document.getElementById("actionMove");
 const actionDelete = document.getElementById("actionDelete");
+const actionShare = document.getElementById("actionShare");
+const actionOffline = document.getElementById("actionOffline");
 
 const renameDialog = document.getElementById("renameDialog");
 const renameInput = document.getElementById("renameInput");
@@ -128,7 +130,8 @@ function bindGlobalHandlers() {
 
   sheetActionMap.addEventListener("click", (event) => {
     if (sheetActionMap.dataset.disabled === "true") {
-      event.stopPropagation();
+      event.preventDefault();
+      triggerDisabledFeedback(sheetActionMap);
       return;
     }
     runTipAction("sheetNewAdd:Map", sheetActionMap, () => {
@@ -151,6 +154,14 @@ function bindGlobalHandlers() {
   actionRename.addEventListener("click", (event) => handleRename(event));
   actionMove.addEventListener("click", (event) => handleMove(event));
   actionDelete.addEventListener("click", (event) => handleDelete(event));
+  actionShare.addEventListener("click", (event) => {
+    event.preventDefault();
+    triggerDisabledFeedback(actionShare);
+  });
+  actionOffline.addEventListener("click", (event) => {
+    event.preventDefault();
+    triggerDisabledFeedback(actionOffline);
+  });
 
   renameConfirm.addEventListener("click", () => confirmRename());
   newFolderConfirm.addEventListener("click", () => confirmNewFolder());
@@ -237,7 +248,8 @@ function openContextMenu(item) {
 
 function handleRename(event) {
   if (actionRename.dataset.disabled === "true") {
-    event.stopPropagation();
+    event.preventDefault();
+    triggerDisabledFeedback(actionRename);
     return;
   }
   const item = state.vfs.getItem(state.selectedItemId);
@@ -264,7 +276,8 @@ function confirmRename() {
 
 function handleDelete(event) {
   if (actionDelete.dataset.disabled === "true") {
-    event.stopPropagation();
+    event.preventDefault();
+    triggerDisabledFeedback(actionDelete);
     return;
   }
   const item = state.vfs.getItem(state.selectedItemId);
@@ -290,7 +303,8 @@ function confirmDelete() {
 
 function handleMove(event) {
   if (actionMove.dataset.disabled === "true") {
-    event.stopPropagation();
+    event.preventDefault();
+    triggerDisabledFeedback(actionMove);
     return;
   }
   const item = state.vfs.getItem(state.selectedItemId);

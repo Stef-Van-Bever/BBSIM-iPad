@@ -3,7 +3,7 @@
     "title": "1.15 - Oefening 7: Bestanden verwijderen",
     "description": "Dit is de OneDrive van een elektricien. Deze elektricien wil graag een oude offerte verwijderen.",
     "type": "delete",
-    "instruction": "Verwijder het bestand \"oude_offerte.pdf\".",
+    "instruction": "Open de map \"📂Offertes\" en verwijder het bestand \"oude_offerte\".",
     "ui": {
         "language": "nl-BE",
         "startLocation": "mijn_bestanden",
@@ -23,7 +23,7 @@
             {
                 "id": "e2",
                 "kind": "file",
-                "name": "oude_offerte.pdf",
+                "name": "oude_offerte",
                 "parentId": "e1",
                 "modified": "2023-03-12",
                 "size": "221 KB",
@@ -32,7 +32,7 @@
             {
                 "id": "e3",
                 "kind": "file",
-                "name": "offerte_2024.pdf",
+                "name": "offerte_2024",
                 "parentId": "e1",
                 "modified": "2024-01-08",
                 "size": "245 KB",
@@ -51,7 +51,7 @@
         "checks": [
             {
                 "op": "itemDeleted",
-                "itemName": "oude_offerte.pdf"
+                "itemName": "oude_offerte"
             }
         ]
     },
@@ -61,8 +61,8 @@
             "text": "Open de map Offertes."
         },
         {
-            "target": "itemMore:oude_offerte.pdf",
-            "text": "Tik op … naast oude_offerte.pdf."
+            "target": "itemMore:oude_offerte",
+            "text": "Tik op … naast oude_offerte."
         },
         {
             "target": "contextAction:Verwijderen",

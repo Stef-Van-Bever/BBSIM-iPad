@@ -11,11 +11,11 @@
 }
 
 export function shakeScreen() {
-  const app = document.getElementById("app");
-  if (!app) return;
-  app.classList.remove("shake");
-  void app.offsetWidth;
-  app.classList.add("shake");
+  const body = document.body;
+  if (!body) return;
+  body.classList.remove("shake");
+  void body.offsetWidth;
+  body.classList.add("shake");
 }
 
 export function openSheet(sheetEl) {

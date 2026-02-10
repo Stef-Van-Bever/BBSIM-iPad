@@ -586,8 +586,10 @@ body {
     animation: tipPulse 1.2s ease-in-out infinite;
 }
 
-.shake {
-    animation: shake 0.25s linear;
+body.shake .instruction-stack,
+body.shake .intro-panel,
+body.shake .app-panel {
+  animation: shake 0.25s linear;
 }
 
 @keyframes shake {

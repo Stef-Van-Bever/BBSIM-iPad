@@ -3,7 +3,7 @@
     "title": "1.15 - Oefening 8: Bestanden verwijderen",
     "description": "Dit is de OneDrive van een fotograaf. Deze fotograaf wil graag een van zijn dubbele foto's verwijderen.",
     "type": "delete",
-    "instruction": "Verwijder het dubbele bestand \"IMG_0001_DUP.jpg\".",
+    "instruction": "Open de map \"📂Fotoshoots\\📂Bruiloft_Jan_Anne\" en verwijder het dubbele bestand \"IMG_0001_DUP.jpg\".",
     "ui": {
         "language": "nl-BE",
         "startLocation": "mijn_bestanden",
@@ -31,7 +31,7 @@
             {
                 "id": "f3",
                 "kind": "file",
-                "name": "IMG_0001.jpg",
+                "name": "IMG_0001",
                 "parentId": "f2",
                 "modified": "2024-06-21",
                 "size": "3,2 MB",
@@ -40,7 +40,7 @@
             {
                 "id": "f4",
                 "kind": "file",
-                "name": "IMG_0001_DUP.jpg",
+                "name": "IMG_0001_DUP",
                 "parentId": "f2",
                 "modified": "2024-06-21",
                 "size": "3,2 MB",
@@ -59,7 +59,7 @@
         "checks": [
             {
                 "op": "itemDeleted",
-                "itemName": "IMG_0001_DUP.jpg",
+                "itemName": "IMG_0001_DUP",
                 "parentName": "Bruiloft_Jan_Anne"
             }
         ]
@@ -74,7 +74,7 @@
             "text": "Open de juiste fotoshoot."
         },
         {
-            "target": "itemMore:IMG_0001_DUP.jpg",
+            "target": "itemMore:IMG_0001_DUP",
             "text": "Tik op … naast het dubbele bestand."
         },
         {

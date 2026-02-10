@@ -13,18 +13,10 @@
         "rootId": "root",
         "items": [
             {
-                "id": "l1",
-                "kind": "folder",
-                "name": "School",
-                "parentId": "root",
-                "modified": "2024-09-01",
-                "size": "—"
-            },
-            {
                 "id": "l2",
                 "kind": "folder",
                 "name": "Lesmateriaal",
-                "parentId": "l1",
+                "parentId": "root",
                 "modified": "2024-09-01",
                 "size": "—"
             },

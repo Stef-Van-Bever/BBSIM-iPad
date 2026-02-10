@@ -1,9 +1,9 @@
 {
     "id": "ex04",
-    "title": "K1.15 - Oefening 4: Mappen hernoemen",
+    "title": "1.15 - Oefening 4: Mappen hernoemen",
     "description": "Dit is de OneDrive van een kunstenaar. De kunstenaar wil graag een van zijn mappen hernoemen.",
     "type": "rename",
-    "instruction": "Geef de map \"Schetsen\" de naam \"Voorstudies\".",
+    "instruction": "Open de map \"📂Projecten\" en geef de map \"📂Voorstudies\" de naam \"Schetsen\".",
     "ui": {
         "language": "nl-BE",
         "startLocation": "mijn_bestanden",
@@ -23,7 +23,7 @@
             {
                 "id": "k2",
                 "kind": "folder",
-                "name": "Schetsen",
+                "name": "Voorstudies",
                 "parentId": "k1",
                 "modified": "2024-09-01",
                 "size": "—"
@@ -50,8 +50,8 @@
         "checks": [
             {
                 "op": "folderRenamed",
-                "oldName": "Schetsen",
-                "newName": "Voorstudies"
+                "oldName": "Voorstudies",
+                "newName": "Schetsen"
             }
         ]
     },

@@ -1,9 +1,9 @@
 {
     "id": "ex01",
     "title": "1.15 - Oefening 1: Nieuwe map maken",
-    "description": "Dit is de map van een student. de student wil graag een nieuwe map maken voor het vak Wiskunde.",
+    "description": "Dit is de map van een student. de student wil graag een nieuwe map 📂 Wiskunde in de map 📂 semester 1.",
     "type": "create_folder",
-    "instruction": "Maak in de map \"📂Studies \\ 📂Semester 1\" een nieuwe map met de naam \"Wiskunde\".",
+    "instruction": "Maak in de map 📂\" Studies\" \\ 📂\"Semester 1\" een nieuwe map met de naam \"Wiskunde\".",
     "ui": {
         "language": "nl-BE",
         "startLocation": "mijn_bestanden",
