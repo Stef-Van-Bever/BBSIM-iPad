@@ -59,10 +59,6 @@
     },
     "tips": [
         {
-            "target": "folderRow:School",
-            "text": "Open de map School."
-        },
-        {
             "target": "folderRow:Lesmateriaal",
             "text": "Open de map Lesmateriaal."
         },
@@ -76,7 +72,35 @@
         },
         {
             "target": "dialogNewFolder:nameInput",
-            "text": "Maak de map 2A."
+            "text": "Geef de map de naam '2A'."
+        },
+        {
+            "target": "folderRow:2A",
+            "text": "Open de map 2A."
+        },
+        {
+            "target": "fabPlus",
+            "text": "Tik opnieuw op + om nog een map te maken."
+        },
+        {
+            "target": "sheetNewAdd:Map",
+            "text": "Kies Map."
+        },
+        {
+            "target": "dialogNewFolder:nameInput",
+            "text": "Geef de naam 'Toetsen'."
+        },
+        {
+            "target": "fabPlus",
+            "text": "Tik opnieuw op + om nog een map te maken."
+        },
+        {
+            "target": "sheetNewAdd:Map",
+            "text": "Kies Map."
+        },
+        {
+            "target": "dialogNewFolder:nameInput",
+            "text": "Geef de naam 'Werkbladen'."
         }
     ]
 }

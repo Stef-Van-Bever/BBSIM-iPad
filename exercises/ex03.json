@@ -1,7 +1,7 @@
 {
     "id": "ex03",
     "title": "1.15 - Oefening 3: Bestanden hernoemen",
-    "description": "Dit is de OneDrive van een muzikant. De muzikant wil graag een van zijn liedjes hernoemen.",
+    "description": "Dit is de OneDrive van een muzikant. Deze muzikant wil graag een van zijn liedjes hernoemen.",
     "type": "rename",
     "instruction": "Open de map \"📂 Muziek\" en geef het bestand \"demo_v1\" de naam \"demo_definitief\".",
     "ui": {

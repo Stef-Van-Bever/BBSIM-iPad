@@ -70,6 +70,8 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 const moveDialog = document.getElementById("moveDialog");
 const folderPicker = document.getElementById("folderPicker");
 const moveConfirm = document.getElementById("moveConfirm");
+const completeDialog = document.getElementById("completeDialog");
+const completeClose = document.getElementById("completeClose");
 
 const tipsButton = document.getElementById("tipsButton");
 const fabPlus = document.getElementById("fabPlus");
@@ -190,6 +192,7 @@ function bindGlobalHandlers() {
   newFolderConfirm.addEventListener("click", () => confirmNewFolder());
   deleteConfirm.addEventListener("click", () => confirmDelete());
   moveConfirm.addEventListener("click", () => confirmMove());
+  completeClose.addEventListener("click", () => closeModal(completeDialog));
 }
 
 function render() {
@@ -505,6 +508,7 @@ function checkProgress() {
     state.completed = true;
     showToast("✅ Goed gedaan! Je hebt deze opdracht voltooid", 3000);
     completeScorm(state.scormApi);
+    openModal(completeDialog);
   } else if (partial) {
     markInstructionPartial();
     showToast("👍 Goed begonnen! Je bent nog niet klaar", 2500);

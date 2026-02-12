@@ -61,8 +61,8 @@
             "text": "Open de map Projecten."
         },
         {
-            "target": "itemMore:Schetsen",
-            "text": "Tik op … naast Schetsen."
+            "target": "itemMore:voorstudies",
+            "text": "Tik op … naast Voorstudies."
         },
         {
             "target": "contextAction:NaamWijzigen",
@@ -70,7 +70,7 @@
         },
         {
             "target": "dialogRename:nameInput",
-            "text": "Typ Voorstudies."
+            "text": "Typ Schetsen."
         }
     ]
 }

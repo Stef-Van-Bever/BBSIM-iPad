@@ -1,7 +1,7 @@
 {
     "id": "ex01",
     "title": "1.15 - Oefening 1: Nieuwe map maken",
-    "description": "Dit is de OneDrive van een student op de hoge school. Deze student wil graag een nieuwe map om alle opdrachten van het vak 'statistiek' te bewaren",
+    "description": "Dit is de OneDrive van een student op de hoge school. Deze student wil graag een nieuwe map om alle opdrachten van het vak 'statistiek' te bewaren.",
     "type": "create_folder",
     "instruction": "Maak in de map 📂\" Studies\"  een nieuwe map met de naam \"Statistiek\".",
     "ui": {
