@@ -1,0 +1,100 @@
+{
+    "id": "ex01",
+    "title": "1.15 - Oefening 1: Nieuwe map maken",
+    "description": "Dit is de OneDrive van een student op de hoge school. Deze student wil graag een nieuwe map om alle opdrachten van het vak 'statistiek' te bewaren.",
+    "type": "create_folder",
+    "instruction": "Maak in de map 📂\" Studies\"  een nieuwe map met de naam \"Statistiek\".",
+    "ui": {
+        "language": "nl-BE",
+        "startLocation": "mijn_bestanden",
+        "listView": true
+    },
+    "startTree": {
+        "rootId": "root",
+        "items": [
+            {
+                "id": "f1",
+                "kind": "folder",
+                "name": "Studies",
+                "parentId": "root",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "f2",
+                "kind": "folder",
+                "name": "Persoonlijk",
+                "parentId": "root",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "f3",
+                "kind": "folder",
+                "name": "Biotechnologie",
+                "parentId": "f1",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "s1",
+                "kind": "file",
+                "name": "planning_sem1.pdf",
+                "parentId": "f1",
+                "modified": "2024-09-15",
+                "size": "420 KB",
+                "fileType": "pdf"
+            },
+            {
+                "id": "f5",
+                "kind": "folder",
+                "name": "Anatomie",
+                "parentId": "f1",
+                "modified": "2024-09-01",
+                "size": "—"
+            },
+            {
+                "id": "f6",
+                "kind": "folder",
+                "name": "Chemie",
+                "parentId": "f1",
+                "modified": "2024-09-01",
+                "size": "—"
+            }
+        ]
+    },
+    "allowedActions": {
+        "createFolder": true,
+        "rename": false,
+        "move": false,
+        "delete": false
+    },
+    "goal": {
+        "type": "create_folder",
+        "checks": [
+            {
+                "op": "folderExists",
+                "parentName": "Studies",
+                "name": "Statistiek"
+            }
+        ]
+    },
+    "tips": [
+        {
+            "target": "folderRow:Studies",
+            "text": "Open eerst de map Studies."
+        },
+        {
+            "target": "fabPlus",
+            "text": "Tik op + om een nieuwe map te maken."
+        },
+        {
+            "target": "sheetNewAdd:Map",
+            "text": "Kies Map."
+        },
+        {
+            "target": "dialogNewFolder:nameInput",
+            "text": "Typ Statistiek en bevestig."
+        }
+    ]
+}
