@@ -1,9 +1,9 @@
 {
     "id": "ex01",
     "title": "1.15 - Oefening 1: Nieuwe map maken",
-    "description": "Dit is de map van een student. Deze student wil graag een nieuwe map om alle taken van wiskunde te bewaren",
+    "description": "Dit is de OneDrive van een student op de hoge school. Deze student wil graag een nieuwe map om alle opdrachten van het vak 'statistiek' te bewaren",
     "type": "create_folder",
-    "instruction": "Maak in de map 📂\" Studies\"  een nieuwe map met de naam \"Wiskunde\".",
+    "instruction": "Maak in de map 📂\" Studies\"  een nieuwe map met de naam \"Statistiek\".",
     "ui": {
         "language": "nl-BE",
         "startLocation": "mijn_bestanden",
@@ -31,7 +31,7 @@
             {
                 "id": "f3",
                 "kind": "folder",
-                "name": "Natuuwetenschappen",
+                "name": "Biotechnologie",
                 "parentId": "f1",
                 "modified": "2024-09-01",
                 "size": "—"
@@ -48,7 +48,7 @@
             {
                 "id": "f5",
                 "kind": "folder",
-                "name": "Engels",
+                "name": "Anatomie",
                 "parentId": "f1",
                 "modified": "2024-09-01",
                 "size": "—"
@@ -56,7 +56,7 @@
             {
                 "id": "f6",
                 "kind": "folder",
-                "name": "Frans",
+                "name": "Chemie",
                 "parentId": "f1",
                 "modified": "2024-09-01",
                 "size": "—"
@@ -75,7 +75,7 @@
             {
                 "op": "folderExists",
                 "parentName": "Studies",
-                "name": "Wiskunde"
+                "name": "Statistiek"
             }
         ]
     },
@@ -83,10 +83,6 @@
         {
             "target": "folderRow:Studies",
             "text": "Open eerst de map Studies."
-        },
-        {
-            "target": "folderRow:Semester 1",
-            "text": "Open de map Semester 1."
         },
         {
             "target": "fabPlus",
@@ -98,7 +94,7 @@
         },
         {
             "target": "dialogNewFolder:nameInput",
-            "text": "Typ Wiskunde en bevestig."
+            "text": "Typ Statistiek en bevestig."
         }
     ]
 }

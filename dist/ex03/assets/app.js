@@ -100,6 +100,9 @@ async function init() {
 
 function bindGlobalHandlers() {
   document.body.addEventListener("click", (event) => {
+    if (tipsButton && tipsButton.contains(event.target)) {
+      return;
+    }
     const disabled = event.target.closest("[data-disabled='true']");
     if (disabled) {
       event.preventDefault();
